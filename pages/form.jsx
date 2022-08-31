@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { db } from "../lib/firebase";
 import { useRecoilState } from "recoil";
 import { formState } from '../component/atom';
+import dayjs from 'dayjs';
 
 export default function Form() {
   const [customerName, setCustomerName] = useState("")
@@ -14,14 +15,14 @@ export default function Form() {
   const [businessForm, setBusinessForm] = useState("")
   const [message, setMessage] = useState("")
   const [recoilForms, setRecoilForms] = useRecoilState(formState);
-  const [formStatus, setFormStatus] = useState("notstarted");
+  // const [formStatus, setFormStatus] = useState("")
 
   
   const handleVariation = e => setRequirement(e.target.value);
 
   const handleChange = e => setBusinessForm(e.target.value);
 
-
+  // const handleStatus = e => setFormStatus(e.target.value);
 
 
   const handleSubmit = (e) => {
@@ -40,7 +41,9 @@ export default function Form() {
         affair: requirement,
         corporatesStructure: businessForm,
         inquiry: message,
-        // status: "notStarted",
+        status: "started",
+        createdAt: dayjs().format('YYYY-MM-DD'),
+        updatedAt: dayjs().format('YYYY-MM-DD'), 
       },
     ]);
 
@@ -54,7 +57,9 @@ export default function Form() {
       affair: requirement,
       corporatesStructure: businessForm,
       inquiry: message,
-      // status: "notStarted",
+      status: "started",
+      createdAt: dayjs().format('YYYY-MM-DD'),
+      updatedAt: dayjs().format('YYYY-MM-DD'), 
     });
 
     setCustomerName("")
@@ -236,11 +241,12 @@ export default function Form() {
             />
         </label>
       </div>
+        
       
         <button 
           type="submit"
-          // name="status"
           // value={formStatus}
+          // onClick={handleStatus}
           // onClick={(e) => setFormStatus(e.target.value)}
           >送信
           </button>
