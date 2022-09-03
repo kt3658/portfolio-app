@@ -245,9 +245,6 @@ export default function Form() {
       
         <button 
           type="submit"
-          // value={formStatus}
-          // onClick={handleStatus}
-          // onClick={(e) => setFormStatus(e.target.value)}
           >送信
           </button>
           

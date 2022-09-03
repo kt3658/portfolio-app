@@ -11,29 +11,8 @@ export default function Data() {
   const [recoilForms, setRecoilForms] = useRecoilState(formState);
   const [filteredForms, setFilteredForms] = useState([]);
   const [filter, setFilter] = useState("all");
-  // const [sort, setSort] = useState("");
-  // const [forms, setForms] = useState([
-  //   {
-  //     id: '',
-  //     names: '',
-  //     furigana: '',
-  //     company: '',
-  //     email: '',
-  //     tel: '',
-  //     affair: '',
-  //     corporatesStructure: '',
-  //     inquiry:'',
-  //     status:'',
-  //     createdAt:'',
-  //     updatedAt:'',
-  //     status:'',
-  //   }
-  // ])
-  // const [formStatus, setFormStatus] = useState();
-
-
-  // const handleStatus = e => setFormStatus(e.target.value);
-
+  const [sort, setSort] = useState("");
+  
 
 
 
@@ -120,22 +99,16 @@ export default function Data() {
   
   // 日付を昇順にソートする場合
   
-//   const sortFormByDate = (e) => {
-//     setSort(e.target.value)
+  const sortFormByDate = (e) => {
+    setSort(e.target.value)
 
-//   if (e.target.value === "asc") {
-//     setFilteredForms(filteredForms.sort((a, b) => (a.createdAt)- (b.createdAt)))
-//   } else {
-//     setFilteredForms(filteredForms.sort((a, b) => (b.createdAt)- (a.createdAt)))
-//   }
+  if (e.target.value === "asc") {
+    setFilteredForms(filteredForms.slice().sort((a, b) => dayjs(a.createdAt,('YYYY-MM-DD')) - dayjs(b.createdAt,('YYYY-MM-DD'))))
+  } else {
+    setFilteredForms(filteredForms.slice().sort((a, b) => dayjs(b.createdAt,('YYYY-MM-DD')) - dayjs(a.createdAt,('YYYY-MM-DD'))))
+  }
 
-// }
-
-
-
-  
-  
-
+}
 
 
 
@@ -144,7 +117,7 @@ export default function Data() {
     <>
     <div>
       <select
-        // value={sort}
+        value={sort}
         onChange={(e) => sortFormByDate(e)}>
         <option>作成日でソート</option>
         <option value="asc">昇順</option>
@@ -182,8 +155,7 @@ export default function Data() {
             <span>{form.affair}</span>
             <span>{form.corporatesStructure}</span>
             <span>{form.inquiry}</span>
-            <span>{form.createdAt}</span>
-            <span>{form.updatedAt}</span>
+            
             <select 
                 value={form.status}
                 onChange={(e) => handleStatusChange(form,e)}
@@ -192,6 +164,8 @@ export default function Data() {
                 <option value="doing">対応中</option>
                 <option value="done">対応済み</option>  
             </select>
+            <span>{form.createdAt}</span>
+            <span>{form.updatedAt}</span>
             <button
               onClick={() => handleDeleteForm(form)}
               >削除
@@ -199,7 +173,9 @@ export default function Data() {
             
             <Link href={{ pathname: "/edit", 
             query: { 
-            id: form.id, names: form.names, furigana: form.furigana, company: form.company}}}>
+            id: form.id, names: form.names, furigana: form.furigana,
+            company: form.company, email: form.email,tel: form.tel,
+            affair: form.affair,corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,updatedAt: form.updatedAt}}}>
             <button>
               編集
             </button>
