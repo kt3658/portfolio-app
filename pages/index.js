@@ -6,6 +6,7 @@ export default function Home() {
     <>
     <Link href="form"><h2>form</h2></Link>
     <Link href="main"><h2>main</h2></Link>
+    <Link href="signup"><h2>signup</h2></Link>
     </>
   )
 }

@@ -2,18 +2,27 @@ import { db } from "../lib/firebase";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { formState } from '../component/atom';
+import { auth } from "../lib/firebase";
 import React from "react";
 import Link from "next/link";
 import dayjs from 'dayjs';
+import { useRouter } from "next/router";
 
 export default function Data() {
+  const router = useRouter();
 
   const [recoilForms, setRecoilForms] = useRecoilState(formState);
   const [filteredForms, setFilteredForms] = useState([]);
   const [filter, setFilter] = useState("all");
   const [sort, setSort] = useState("");
   
-
+  
+  useEffect(()=> {
+    const unSub = auth.onAuthStateChanged((user)=> {
+      !user && router.push("./Login");
+    });
+    return ()=> unSub();
+  })
 
 
   useEffect(() => {
@@ -116,6 +125,25 @@ export default function Data() {
   return (
     <>
     <div>
+      
+    <button
+        
+        onClick={async () => {
+          try {
+            await auth.signOut();
+            router.push("./Login");
+          } catch (error) {
+            alert(error.message);
+          }
+        }}
+        
+      >
+      LogOut
+      </button>
+
+      <Link href="admin"><button>管理者プロフィールへ</button></Link>
+
+      
       <select
         value={sort}
         onChange={(e) => sortFormByDate(e)}>

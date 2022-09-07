@@ -248,7 +248,7 @@ export default function Form() {
           >送信
           </button>
           
-          <Link href="./data">
+          <Link href="./Login">
           <button 
           type="text"
           >管理画面へ
