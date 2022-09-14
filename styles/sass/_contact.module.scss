@@ -1,0 +1,178 @@
+
+
+
+// .body {
+//   background-color: #fff;
+//   letter-spacing: 0.08em;
+//   font-size: 1.6rem;
+//   font-family: "Arial","Hiragino Kaku Gothic ProN",sans-serif;
+//   position: relative;
+//   min-width: 1040px;
+//   @media screen and (max-width: 750px) {
+//     min-width: initial;
+//     }
+// }
+
+
+
+
+
+.section-title {
+  font-weight: normal;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.section-title .en {
+  font-size: 32px;
+  display: block;
+}
+
+.section-title .ja {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title .ja:before,
+.section-title .ja:after {
+  content: "";
+  width: 8px;
+  border-top: 1px solid;
+}
+
+.section-title .ja:before {
+  margin-right: 5px;
+}
+
+.section-title .ja:after {
+  margin-left: 1px;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 750px) {
+    max-width: 375px;
+    padding: 0 15px;
+    }
+  
+}
+
+
+
+.contact {
+  background-color: #c9d9e6;
+  padding-bottom: 40px;
+  font-family: "Arial","Hiragino Kaku Gothic ProN",sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.contact-container {
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 8px;
+  @media screen and (max-width: 750px) {
+    width: 100%;
+  }
+  // dt {
+  //   text-align: left;
+  //   padding-top: 24px;
+  // }
+}
+
+.contact-container span {
+  color: #E90000;
+}
+
+.contact-container input {
+  background-color: #fff;
+  width: 100%;
+  height: 48px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border-color: #fff;
+}
+
+
+.contact-container div {
+  margin-top: 16px;
+}
+
+
+
+.contact-container dt {
+  font-size: 18px;
+}
+
+.contact-container input[type=radio] {
+  height: 16px;
+  width: 5%;
+  
+}
+
+
+
+
+.contact-container textarea {
+  background-color: #fff;
+  width: 100%;
+  height: 140px;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+.contact-container input::placeholder {
+  padding: 12px 0 0 6px;
+  color: #ccc;
+}
+
+.contact-container textarea::placeholder {
+  padding: 12px 0 0 6px;
+  color: #ccc;
+}
+
+.contactButton {
+  text-align: center;
+}
+
+.contactButton input {
+  width: 188px;
+  height: 60px;
+  background-color: #339C64;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.contactButton input:hover {
+  color: #339C64;
+  background-color: #fff;
+  border: 1px solid #339C64;
+}
+
+.contactMessage {
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  margin-top: 32px;
+  text-align:center;
+
+  @media screen and (max-width: 750px) {
+    text-align: justify;
+  }
+
+}
+
+.footer p {
+  font-size: 12px;
+  text-align: center;
+  padding: 32px 0;
+  @media screen and (max-width: 750px) {
+    font-size: 0.8rem;
+  }
+}

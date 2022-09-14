@@ -1,0 +1,147 @@
+.worksunder-mainvisual {
+    background-image: url(../img/works-main.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 403px 20px;
+    @media screen and (max-width: 750px) {
+      padding: 230px 20px;
+      }
+  }
+
+  
+
+  .worksunder-textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 46px;
+  }
+
+  .worksunder-title {
+    font-size: 4.8rem;
+    color: #fff;
+    border: 1px solid #339C64;
+    background-color: #339C64;
+    border-width: 12.5px;
+    @media screen and (max-width: 750px) {
+      font-size: 3.2rem;
+      border-width: 5px;
+      }
+  }
+
+  .worksunder-block {
+    margin-top: 78px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 750px) {
+      margin-top: 0;
+    }
+  }
+
+  .worksunder-list:nth-of-type(1) {
+    @media screen and (max-width: 750px) {
+      margin-top: 56px;
+    }
+  }
+
+  .worksunder-list:nth-of-type(2) {
+    @media screen and (max-width: 750px) {
+      margin-top: 56px;
+    }
+  }
+
+  .worksunder-list:nth-of-type(3) {
+    margin-top: 100px;
+    @media screen and (max-width: 750px) {
+      margin-top: 56px;
+    }
+  }
+
+  .worksunder-list:nth-of-type(4) {
+    margin-top: 100px;
+    @media screen and (max-width: 750px) {
+      margin-top: 56px;
+    }
+  }
+
+  .worksunder-list:nth-of-type(5) {
+    margin-top: 100px;
+    @media screen and (max-width: 750px) {
+      margin-top: 56px;
+    }
+  }
+
+  .worksunder-list a:hover {
+    opacity: 0.5;
+  }
+
+  .worksunder-image {
+    height: 400px;
+    
+    @media screen and (max-width: 750px) {
+      width: 345px;
+      height: 320px;
+      object-fit: cover;
+    }
+  }
+
+  .worksunder-button {
+    text-align: center;
+    padding-bottom: 60px;
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  .worksunder-button input {
+  width: 188px;
+  height: 60px;
+  background-color: #339C64;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 42px;
+  }
+
+  .worksunder-button input:hover {
+  background-color: #fff;
+  color: #339C64;
+  border: 1px solid #339C64;
+  }
+  
+  .worksunder-pagenation {
+    margin-top: 64px;
+    font-size: 2.0rem;
+    padding-right: 20px;
+    @media screen and (max-width: 750px) {
+      margin-top: 80px;
+      padding-bottom: 46px;
+    }
+  }
+
+  .worksunder-pagenation2 {
+    margin-top: 64px;
+    font-size: 2.0rem;
+    padding-left: 30px;
+    @media screen and (max-width: 750px) {
+      margin-top: 80px;
+      padding-bottom: 46px;
+    }
+  }
+
+  .worksunder-pagenation a:hover {
+    opacity: 0.5;
+  }
+
+  .worksunder-pagenation2 a:hover {
+    opacity: 0.5;
+  }
+  
+  .worksunder-pagebox {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+

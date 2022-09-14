@@ -5,6 +5,7 @@ import { useRecoilState } from "recoil";
 import { formState } from '../component/atom';
 import { db } from "../lib/firebase";
 import dayjs from 'dayjs';
+import scss from "../styles/sass/_edit.module.scss";
 
 export default function Edit() {
   const router = useRouter();
@@ -82,47 +83,77 @@ export default function Edit() {
   };
   return (
     <>
-    <div>
-    <p className="text-4xl bg-pink-300 text-center p-6 font-sans">Formの編集</p>
+    <div className={scss.editTitleContainer}>
+    <p className={scss.editTitle}>FormDataEdit</p>
     </div>
-      <div className="md:flex  mt-10 md:justify-center text-center">
+      <div>
+        <div className={scss.editBox}>
+        
+        <div className={scss.editContainer}>
+        <dt className={scss.editNameTitle}>氏名</dt>
+        
         <input
+          className={scss.editNameData}
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="山田太郎"
           value={newCustomerName}
           onChange={handleEditNamesChange}
           
         />
+        </div>
+        
+        <div className={scss.editContainer}>
+        <dt className={scss.editNameTitle}>ふりがな</dt>
         <input 
+          className={scss.editNameData}
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="やまだたろう"
           value={newFuriganaName}
           onChange={handleEditFuriganaChange}  
         />
+        </div>
+        
+        <div className={scss.editContainer}>
+        <dt className={scss.editNameTitle}>会社・組織名</dt>
         <input 
+          className={scss.editNameData}
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="山田株式会社"
           value={newCompanyName}
           onChange={handleEditCompanyChange}  
         />
-        <input 
+        </div>
+        </div>
+        
+        <div className={scss.editBox2}>
+        <div classname={scss.editContainer2}>
+        <dt className={scss.editNameTitle}>メールアドレス</dt>
+        <input
+          className={scss.editPhoneData} 
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="sample@sample.com"
           value={newMail}
           onChange={handleEditMailChange}  
         />
-        <input 
+        </div>
+        
+        <div classname={scss.editContainer2}>
+        <dt className={scss.editNameTitle}>電話番号</dt>
+        <input
+          className={scss.editPhoneData} 
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="090-0123-4567"
           value={newTelephone}
           onChange={handleEditTelephoneChange}  
         />
-        <div>
+        </div>
+        </div>
+        <div className={scss.editBox3}>
         <label>
           ご用件：
           <input
@@ -165,7 +196,7 @@ export default function Edit() {
           その他
         </label>
       </div>
-      <div>
+      <div className={scss.editBox4}>
         <label>
           事業形態：
           <input
@@ -198,19 +229,24 @@ export default function Edit() {
           その他
         </label>
       </div>
-      <input 
+      <div className={scss.editBox5}>
+      <dt className={scss.editMessageText}>お問い合わせ内容</dt>
+      <textarea
+          className={scss.editLargeBox}
           type="text"
           label="新しいタイトル"
-          placeholder="Formを編集"
+          placeholder="よろしくお願いします"
           value={newMessage}
           onChange={handleEditMessageChange}  
         />
+        </div>
         <Link href={{ pathname: "/data", query: { names: newCustomerName, furigana: newFuriganaName,company: newCompanyName, email: newMail,affair: newRequirement,corporatesStructure: newBusinessForm,updatedAt: newUpdate } }}>
+          <div className={scss.editButton}>
           <button 
-      
             onClick={handleEditForm}>
               編集を保存
           </button>
+          </div>
         </Link>
         <Link href="./data">
           <button 

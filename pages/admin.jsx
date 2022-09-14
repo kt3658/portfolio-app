@@ -39,7 +39,6 @@ export default function Admin() {
     <>
     <h2>管理者の名前 Ken</h2>
     <button
-    onClick={handleSubmit} 
     >
     パスワードの変更
     </button>

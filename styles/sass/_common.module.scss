@@ -1,0 +1,102 @@
+/* Theme Name: Ken Portfolio
+*/
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: #fff;
+  letter-spacing: 0.08em;
+  font-size: 1.6rem;
+  font-family: "Arial","Hiragino Kaku Gothic ProN",sans-serif;
+  position: relative;
+  min-width: 1040px;
+  @media screen and (max-width: 750px) {
+    min-width: initial;
+    }
+}
+
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+.site-title {
+  font-size: 3.2rem;
+  padding: 20px 0;
+  font-family:"Helvetica";
+  @media screen and (max-width: 750px) {
+    font-size: 2.2rem;
+    }
+}
+
+.section-title {
+  font-weight: normal;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.section-title .en {
+  font-size: 3.2rem;
+  display: block;
+}
+
+.section-title .ja {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title .ja:before,
+.section-title .ja:after {
+  content: "";
+  width: 8px;
+  border-top: 1px solid;
+}
+
+.section-title .ja:before {
+  margin-right: 5px;
+}
+
+.section-title .ja:after {
+  margin-left: 1px;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 750px) {
+    max-width: 375px;
+    padding: 0 15px;
+    }
+  
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.hide{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+}

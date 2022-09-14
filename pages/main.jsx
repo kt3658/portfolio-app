@@ -1,5 +1,6 @@
-import Image from "next/image"
-
+import Image from "next/image";
+import scss from "../styles/sass/_main.module.scss";
+import Head from 'next/head';
 
 export default function Main() {
 
@@ -7,41 +8,83 @@ export default function Main() {
 <>
 <main>
       <>
-      <div className="mainvisual">
-        <div className="mainvisual-container wrapper">
+      <Head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="webポートフォリオサイトです。" name="description"/>
+    <title>Ken | Web Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico.png"/>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
+    <link rel="stylesheet" href="../styles/sass/_main.module.scss"/>
+    <link rel="stylesheet" href="css/style.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css"/>  
+  </Head>
+  
+  
+    <section id="js-header" className="header">
+      <div className="wrapper header-container">
+        <h1 className="site-title">
+          <a href="#">KEN PORTFOLIO</a>
+        </h1>
+
+        <nav className="header-nav" id="js-header-nav">
+          <ul className="header-ul">
+            <li><a href="#">Home</a></li>
+            <li><a href="#js-service">Service</a></li>
+            <li><a href="#js-about">About</a></li>
+            <li><a href="#js-works">Works</a></li>
+            <li><a href="#js-contact">Contact</a></li>  
+          </ul>
+        </nav>
+        
+        <div className="header-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+  
+        <div id="js-header-mask" className="header-mask">
+        </div>
+      </div>
+    </section>
+
+
+      <div className={scss.mainvisual}>
+        <div className={`${scss['mainvisual-container']}${scss.wrapper}`}>
           <Image src="/images/mainvisual.png" alt="メインモックアップ" width="612" height="380"/>
-          <div className="mainvisual-textunit">
-            <h2 className="mainvisual-title">KEN<br/>PORTFOLIO</h2>
-            <p className="mainvisual-text">傾聴を重視し、お客様のご満足のいくサイトをお作り出来るよう心掛けています。</p>
+          <div className={scss['mainvisual-textunit']}>
+            <h2 className={scss['mainvisual-title']}>KEN<br/>PORTFOLIO</h2>
+            <p className={scss['mainvisual-text']}>傾聴を重視し、お客様のご満足のいくサイトをお作り出来るよう心掛けています。</p>
           </div>
         </div>
       </div>
       
     
-      <section id="js-service" className="service wrapper fadein internal-links">
-        <h2 className="section-title">
-          <span className="en">Service</span>
-          <span className="ja">出来ること</span>
+      <section id="js-service" className={`${scss.service}${scss.wrapper}${scss.fadein}${scss['internal-links']}`}>
+        <h2 className={scss['section-title']}>
+          <span className={scss.en}>Service</span>
+          <span className={scss.ja}>出来ること</span>
         </h2>
         
-        <ul className="service-container slidebottom show">
-          <li className="service-list hide">
-            <Image className="service-image" src="/images/service-01.svg" alt="カンプ再現" width="152" height="120"/>
-            <h3 className="service-title">カンプ再現</h3>
-            <p className="service-text">デザインカンプを正確に再現致<br/>します。<br/>
+        <ul className={`${scss['service-container']} ${scss.slidebottom} ${scss.show}`}>
+          <li className={`${scss['service-list']}${scss.hide}`}>
+            <Image className={scss['service-image']} src="/images/service-01.svg" alt="カンプ再現" width="152" height="120"/>
+            <h3 className={scss['service-title']}>コーディング</h3>
+            <p className={scss['service-text']}>デザインカンプを正確に再現致<br/>します。<br/>
               レスポンシブデザインにより,<br/>スマートフォンやタブレットに<br/>対応させることが出来ます。</p>
           </li>
-          <li className="service-list hide">
-            <Image className="service-image" src="/images/service-02.svg" alt="アニメーション" width="152" height="120"/>
-            <h3 className="service-title">アニメーション</h3>
-            <p className="service-text">サイトにアニメーションを使っ<br/>て動きをつけます。<br/>
+          <li className={`${scss['service-list']}${scss.hide}`}>
+            <Image className={scss['service-image']} src="/images/service-02.svg" alt="アニメーション" width="152" height="120"/>
+            <h3 className={scss['service-title']}>アニメーション</h3>
+            <p className={scss['service-text']}>サイトにアニメーションを使っ<br/>て動きをつけます。<br/>
               スクロールに応じたアニメー<br/>ション,ハンバーガーメニュー,<br/>アコーディオンなど実装可能で<br/>す。</p>
           </li>
           
-          <li className="service-list hide">
-            <Image className="service-image" src="/images/service-03.svg" alt="WordPress構築" width="152" height="120"/>
-            <h3 className="service-title">WordPress構築</h3>
-            <p className="service-text">WordPressでオリジナルテーマ<br/>を作成致します。<br/>
+          <li className={`${scss['service-list']}${scss.hide}`}>
+            <Image className={scss['service-image']} src="/images/service-03.svg" alt="WordPress構築" width="152" height="120"/>
+            <h3 className={scss['service-title']}>WordPress構築</h3>
+            <p className={scss['service-text']}>WordPressでオリジナルテーマ<br/>を作成致します。<br/>
               既存サイトのWordPress化も可<br/>能です。<br/>また,状況に応じてカスタムフィ<br/>ールドなども扱います。</p>
           </li>
           
@@ -49,23 +92,23 @@ export default function Main() {
       </section>
       
 
-      <section id="js-about" className="about fadein internal-links">
-        <div className="wrapper">
-          <h2 className="section-title">
-            <span className="en">About</span>
-            <span className="ja">私について</span>
+      <section id="js-about" className={`${scss.about} ${scss.fadein} ${scss['internal-links']}`}>
+        <div className={scss.wrapper}>
+          <h2 className={scss['section-title']}>
+            <span className={scss.en}>About</span>
+            <span className={scss.ja}>私について</span>
           </h2>
 
-          <div className="about-container">
-            <Image className="about-image" src="/images/about-01.jpg" alt="私の似顔絵" width="320" height="400"/>
-            <div className="about-textunit">
-              <p className="about-name">名前：KEN</p>
-              <p className="about-text">福岡県出身の35歳。事務職で働く傍ら、web制作をしています。
+          <div className={scss['about-container']}>
+            <Image className={scss['about-image']} src="/images/about-01.jpg" alt="私の似顔絵" width="320" height="400"/>
+            <div className={scss['about-textunit']}>
+              <p className={scss['about-name']}>名前：KEN</p>
+              <p className={scss['about-text']}>福岡県出身の35歳。事務職で働く傍ら、web制作をしています。
                 (デザインは専門外です。)<br/>
                 コードを書く楽しさから、学習・創作に打ち込むようになりました。<br/>
                 お困りの方を助けることの出来る存在でありたいです。よろしくお願い致します。
               </p>
-              <h4 className="about-qa">Q＆A</h4>
+              <h4 className={scss['about-qa']}>Q＆A</h4>
 
               <div className="accordion-container js-accordion">
                 <div className="js-accordion-trigger">
@@ -92,9 +135,9 @@ export default function Main() {
       </section>
 
       <section id="js-works" className="works wrapper fadein internal-links">
-        <h2 className="section-title">
-          <span className="en">Works</span>
-          <span className="ja">制作実績</span>
+        <h2 className={scss['section-title']}>
+          <span className={scss.en}>Works</span>
+          <span className={scss.ja}>制作実績</span>
         </h2>
         
         <div className="swiper-container">
@@ -141,6 +184,13 @@ export default function Main() {
           </div>
         </div>
       </section>
+      
+      <section className="footer wrapper">
+      <p>Copyright©2022 KEN portfolio All rights reserved.</p>
+      </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+      <script src="/js/main.js"></script>
       </>
     </main>
     

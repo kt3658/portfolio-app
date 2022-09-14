@@ -1,0 +1,109 @@
+.editTitleContainer {
+  background-color: #990F55;
+  height: 120px;
+  width: 100%;
+}
+
+.editTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+  height: 120px;
+  margin: auto;
+  
+}
+
+.editNameData {
+  height: 60px;
+  width: 100%;
+  border-radius: 5px;
+  padding-right: 180px;
+  margin-right: 100px;
+  border: 1px solid rgb(210, 201, 201);
+  margin-top: 5px;
+}
+
+.editNameTitle {
+  margin-top: 40px;
+}
+
+.editBox {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+
+
+.editBox2 {
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  margin-top: -8px;
+}
+
+.editPhoneData {
+  height: 60px;
+  width: 88%;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 201, 201);
+  margin-top: 5px;
+  padding-right: 180px;
+  margin-right: 100px;
+}
+
+.editPhoneData p {
+  margin-left: 60px;
+  display: inline;
+
+}
+
+.editBox3 {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.editBox4 {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.editBox5 {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.editLargeBox {
+  background-color: #fff;
+  width: 40%;
+  height: 140px;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+.editMessageText {
+  padding-right: 440px;
+}
+
+.editButton {
+  text-align: center;
+  display: block;
+}
+
+.editButton button {
+  width: 188px;
+  height: 60px;
+  background-color: #979899;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.editButton button:hover {
+  color: #979899;
+  background-color: #fff;
+  border: 1px solid #979899;
+}

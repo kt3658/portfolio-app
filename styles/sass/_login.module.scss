@@ -1,0 +1,108 @@
+.Login {
+  width: 480px;
+  margin: 80px auto;
+  font-size: 16px;
+  
+}
+
+.Login p {
+  margin-top: -2px;
+  margin-bottom: 0;
+}
+
+.Login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.Login input[type="email"] {
+  margin-top: 16px;
+}
+
+
+.Login input[type="email"],
+.Login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+.Login input[type="email"]:focus,
+.Login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.LoginTriangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.LoginTitle {
+  margin-top: 0;
+  margin-bottom: -20px;
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.LoginContainer {
+  text-align: center;
+  background: #ebebeb;
+  padding: 12px;
+}
+
+
+.LoginButton {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1.01em;
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.LoginButton:hover {
+  background: #17c;
+}
+
+.LoginBack {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1.01em;
+  background: #969899;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.LoginBack:hover {
+  background: #717273;
+}

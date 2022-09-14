@@ -5,19 +5,19 @@ export default function Show() {
   const router = useRouter();
   return (
     <>
-    <p>Dataの詳細</p>
-    <p>{router.query.id}</p>
-    <p>{router.query.names}</p>
+    <p>Formデータの詳細</p>
+    <p>固有ID：{router.query.id}</p>
+    <h2>{router.query.names}</h2>
     <p>{router.query.furigana}</p>
     <p>{router.query.company}</p>
     <p>{router.query.email}</p>
     <p>{router.query.tel}</p>
-    <p>{router.query.affair}</p>
-    <p>{router.query.corporatesStructure}</p>
-    <p>{router.query.inquiry}</p>
-    <p>{router.query.createdAt}</p>
-    <p>{router.query.updatedAt}</p>
-    <p>{router.query.status}</p>
+    <p>ご用件：{router.query.affair}</p>
+    <p>事業形態：{router.query.corporatesStructure}</p>
+    <p>お問い合わせ内容：{router.query.inquiry}</p>
+    <p>送信日：{router.query.createdAt}</p>
+    <p>編集更新日：{router.query.updatedAt}</p>
+    <p>進捗状況：{router.query.status}</p>
 
       <Link href={{ pathname: "/edit", 
         query: { 

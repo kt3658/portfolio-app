@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { auth } from "../lib/firebase";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import scss from "../styles/sass/_login.module.scss";
+
   export default function Login() {
   
   const router = useRouter();
@@ -17,33 +19,46 @@ import Link from "next/link";
   });
 
   return (
-    <div>
-      <h1>{isLogin ? "Login" : "Register"}</h1>
+  
+    <div className={scss.Login}>
+      <div className={scss.LoginTriangle}></div>
+      <h1 className={scss.LoginTitle}>{isLogin ? "ログイン" : "Register"}</h1>
       <br />
-      <form>
+      <div className={scss.LoginContainer}>
+        <form>
+        <p>
         <input
           name="email"
           label="E-mail"
+          type="email"
+          placeholder="Email"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
-      </form>
+        </p>
+        </form>
       <br />
-      <form>
+        <form>
+        <p>
         <input
           name="password"
           label="Password"
           type="password"
+          placeholder="Password"
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-      </form>
+        </p>
+        </form>
       <br />
+      
+      <p>
       <button
+        className={scss.LoginButton}
         onClick={
           isLogin
             ? async () => {
@@ -64,13 +79,17 @@ import Link from "next/link";
               }
         }
       >
-        {isLogin ? "login" : "register"}
+        {isLogin ? "LOGIN" : "register"}
       </button>
+      </p>
       <br />
         <span onClick={() => setIsLogin(!isLogin)}>
           
         </span>
-        <Link href="form"><button>前のページへ</button></Link>
+        <Link href="form"><p><button
+        className={scss.LoginBack}
+        >前のページへ</button></p></Link>
+        </div>
     </div>
   );
 };

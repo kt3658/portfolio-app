@@ -4,6 +4,9 @@ import { db } from "../lib/firebase";
 import { useRecoilState } from "recoil";
 import { formState } from '../component/atom';
 import dayjs from 'dayjs';
+import scss from "../styles/sass/_contact.module.scss";
+import Head from 'next/head';
+
 
 export default function Form() {
   const [customerName, setCustomerName] = useState("")
@@ -15,14 +18,14 @@ export default function Form() {
   const [businessForm, setBusinessForm] = useState("")
   const [message, setMessage] = useState("")
   const [recoilForms, setRecoilForms] = useRecoilState(formState);
-  // const [formStatus, setFormStatus] = useState("")
+  
 
   
   const handleVariation = e => setRequirement(e.target.value);
 
   const handleChange = e => setBusinessForm(e.target.value);
 
-  // const handleStatus = e => setFormStatus(e.target.value);
+  
 
 
   const handleSubmit = (e) => {
@@ -77,14 +80,38 @@ export default function Form() {
 
   return (
     <>
-    <h1> お問合せフォーム </h1>
+  
+    <Head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="webポートフォリオサイトです。" name="description"/>
+    <title>Ken | Web Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico.png"/>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
+    <link rel="stylesheet" href="../styles/sass/_contact.module.scss"/>
+    <link rel="stylesheet" href="css/style.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css"/>  
+  </Head>
+
+  
+  
+    <section id="js-contact" className={`${scss.contact} ${scss.fadein} ${scss['internal-links']}`}>
+        <div className={scss.wrapper}>
+          <h2 className={scss['section-title']}>
+            <span className={scss.en}>Contact</span>
+            <span className={scss.ja}>お問い合わせ</span>
+          </h2>
+          <p className={scss.contactMessage}>当サイトにご訪問いただきありがとうございます。<br/>ご用件などがございましたら、下記フォームよりお気軽にお問い合わせください。</p>
+    <div className={scss['contact-container']}>
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="names">
-          氏名：
+          <dt>氏名<span>*</span></dt>
           <input 
             type="text" 
-            id="names" 
+            id="names"
+            placeholder="山田太郎" 
             name="customername"
             required="required"
             value={customerName}
@@ -95,10 +122,12 @@ export default function Form() {
 
       <div>
         <label htmlFor="furigana">
-          ふりがな：
+          <dt>ふりがな<span>*</span></dt>
+          
           <input 
             type="text" 
             id="furigana" 
+            placeholder="やまだたろう"
             name="furigananame"
             required="required"
             value={furiganaName}
@@ -109,10 +138,12 @@ export default function Form() {
 
       <div>
         <label htmlFor="company">
-          会社・組織名：
+          <dt>会社・組織名<span>*</span></dt>
+        
           <input 
             type="text" 
             id="company" 
+            placeholder="山田株式会社"
             name="companyname"
             required="required"
             value={companyName}
@@ -123,10 +154,12 @@ export default function Form() {
       
       <div>
         <label htmlFor="email">
-          メールアドレス：
+          <dt>メールアドレス<span>*</span></dt>
+          
           <input 
             type="email" 
             id="email" 
+            placeholder="sample@sample.com"
             name="mail" 
             required="required"
             value={mail}
@@ -137,11 +170,12 @@ export default function Form() {
 
       <div>
         <label htmlFor="tel">
-          電話番号：
+          <dt>電話番号<span>*</span></dt>
           <input 
             type="tel" 
             id="tel" 
             name="telephone"
+            placeholder="090-0123-4567"
             required="required"
             pattern="\d{2,4}-\d{3,4}-\d{3,4}"
             value={telephone}
@@ -151,8 +185,11 @@ export default function Form() {
       </div>
       
       <div>
+        
         <label>
-          ご用件：
+          <dt>ご用件<span>*</span></dt>
+          
+          
           <input
             type="radio"
             value="料金について"
@@ -160,9 +197,12 @@ export default function Form() {
             checked={requirement=== "料金について"}
             onChange={handleVariation}
           />
+          
           料金について
+          
         </label>
         <label>
+          
           <input
             type="radio"
             value="機能について"
@@ -171,8 +211,12 @@ export default function Form() {
             onChange={handleVariation}
           />
           機能について
+          
         </label>
+
+        
         <label>
+          
           <input
             type="radio"
             value="制作のご依頼"
@@ -181,8 +225,11 @@ export default function Form() {
             onChange={handleVariation}
           />
           制作のご依頼
+          
         </label>
+        
         <label>
+          
           <input
             type="radio"
             value="その他"
@@ -192,11 +239,12 @@ export default function Form() {
           />
           その他
         </label>
+        
       </div>
       
       <div>
         <label>
-          事業形態：
+        <dt>事業形態<span>*</span></dt>
           <input
             type="radio"
             value="BtoB(法人向け)"
@@ -230,10 +278,11 @@ export default function Form() {
       
       <div>
         <label htmlFor="inquiry">
-          お問い合わせ内容：
+          <dt>お問い合わせ内容<span>*</span></dt>
           <textarea 
             type="text" 
             id="message"
+            placeholder="お気軽にご相談ください。"
             required="required" 
             name="inquiry" 
             value={message}
@@ -243,19 +292,27 @@ export default function Form() {
       </div>
         
       
-        <button 
-          type="submit"
-          >送信
-          </button>
+      <div className={scss.contactButton}><input type="submit" value="送信する"/></div>
           
           <Link href="./Login">
           <button 
           type="text"
-          >管理画面へ
+          >
+          管理画面へ
           </button>
           </Link>
         
     </form>
+    </div>
+    </div>
+    </section>
+    
+    
+    <div className={`${scss.footer} ${scss.wrapper}`}>
+      <p>Copyright©2022 KEN portfolio All rights reserved.</p>
+    </div>
+    
+
   </>
   )
 }
