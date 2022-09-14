@@ -282,6 +282,7 @@ export default function Form() {
           <textarea 
             type="text" 
             id="message"
+            maxlength="100"
             placeholder="お気軽にご相談ください。"
             required="required" 
             name="inquiry" 

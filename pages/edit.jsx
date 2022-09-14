@@ -234,6 +234,7 @@ export default function Edit() {
       <textarea
           className={scss.editLargeBox}
           type="text"
+          maxlength="100"
           label="新しいタイトル"
           placeholder="よろしくお願いします"
           value={newMessage}
