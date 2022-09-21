@@ -7,6 +7,8 @@ import React from "react";
 import Link from "next/link";
 import dayjs from 'dayjs';
 import { useRouter } from "next/router";
+import scss from "../styles/sass/_data.module.scss";
+import Image from "next/image";
 
 export default function Data() {
   const router = useRouter();
@@ -124,25 +126,38 @@ export default function Data() {
 
   return (
     <>
+    <div className={scss.dataTitle}>
+      <div>
+        <p className={scss.dataText}>DATA ADMINISTRATOR</p>
+      </div>
+      <div className={scss.dataRight}>
+        <Link href="admin">
+          <p className={scss.dataAdmin}>
+            <Image src="/images/kkrn_icon_user_2.png" width="100" height="100"/>
+          </p>
+        </Link>
+        <div className={scss.dataLogoutButton}>
+          <button
+            
+            onClick={async () => {
+              try {
+                await auth.signOut();
+                router.push("./Login");
+              } catch (error) {
+                alert(error.message);
+              }
+            }}
+            
+            >
+            LogOut
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    
     <div>
       
-    <button
-        
-        onClick={async () => {
-          try {
-            await auth.signOut();
-            router.push("./Login");
-          } catch (error) {
-            alert(error.message);
-          }
-        }}
-        
-      >
-      LogOut
-      </button>
-
-      <Link href="admin"><button>管理者プロフィールへ</button></Link>
-
       
       <select
         value={sort}
@@ -159,7 +174,25 @@ export default function Data() {
         <option value="doing">対応中</option>
         <option value="done">対応済み</option>
       </select>
-    
+      
+      <div class={scss.dataName}>
+        <span className={scss.dataIDTitle}>固有ID</span>
+        <span className={scss.dataNameTitle}>氏名</span>
+        <span className={scss.dataFuriganaTitle}>ふりがな</span>
+        <span className={scss.dataCompanyTitle}>会社・組織名</span>
+        <span className={scss.dataMailTitle}>メールアドレス</span>
+        <span className={scss.dataAffairTitle}>ご用件</span>
+        <span className={scss.dataCorporatesStructureTitle}>事業形態</span>
+        <br />
+        <div className={scss.dataUnderName}>
+          <span className={scss.dataInquiryTitle}>お問い合わせ内容</span>
+          <span className={scss.dataStatusTitle}>対応状況</span>
+          <span className={scss.dataDateTitle}>送信日</span>
+          <span className={scss.dataEditDateTitle}>編集更新日</span>
+        </div>
+      </div>
+
+
       { !filteredForms.length ?
           <p>
             formが登録されていません
@@ -168,6 +201,7 @@ export default function Data() {
           <ul> 
         {filteredForms?.map((form) =>(
           <li key={form.id}>
+            
             <Link href = {{ pathname: "/show", 
             query: { 
             id: form.id, names: form.names, furigana: form.furigana,

@@ -6,6 +6,8 @@ import { formState } from '../component/atom';
 import { db } from "../lib/firebase";
 import dayjs from 'dayjs';
 import scss from "../styles/sass/_edit.module.scss";
+import Head from 'next/head';
+
 
 export default function Edit() {
   const router = useRouter();
@@ -83,6 +85,12 @@ export default function Edit() {
   };
   return (
     <>
+    <Head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </Head>
+
     <div className={scss.editTitleContainer}>
     <p className={scss.editTitle}>FormDataEdit</p>
     </div>
@@ -129,7 +137,7 @@ export default function Edit() {
         </div>
         
         <div className={scss.editBox2}>
-        <div classname={scss.editContainer2}>
+        <div className={scss.editContainer2}>
         <dt className={scss.editNameTitle}>メールアドレス</dt>
         <input
           className={scss.editPhoneData} 
@@ -141,7 +149,7 @@ export default function Edit() {
         />
         </div>
         
-        <div classname={scss.editContainer2}>
+        <div className={scss.editContainer2}>
         <dt className={scss.editNameTitle}>電話番号</dt>
         <input
           className={scss.editPhoneData} 
@@ -234,7 +242,7 @@ export default function Edit() {
       <textarea
           className={scss.editLargeBox}
           type="text"
-          maxlength="100"
+          maxLength="100"
           label="新しいタイトル"
           placeholder="よろしくお願いします"
           value={newMessage}
@@ -249,12 +257,14 @@ export default function Edit() {
           </button>
           </div>
         </Link>
+        <div className={scss.backButton}>
         <Link href="./data">
           <button 
             >
-              キャンセル
+              前のページに戻る
           </button>
         </Link>
+        </div>
       </div>
       </>
   )

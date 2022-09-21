@@ -282,7 +282,7 @@ export default function Form() {
           <textarea 
             type="text" 
             id="message"
-            maxlength="100"
+            maxLength="100"
             placeholder="お気軽にご相談ください。"
             required="required" 
             name="inquiry" 
@@ -295,13 +295,7 @@ export default function Form() {
       
       <div className={scss.contactButton}><input type="submit" value="送信する"/></div>
           
-          <Link href="./Login">
-          <button 
-          type="text"
-          >
-          管理画面へ
-          </button>
-          </Link>
+          
         
     </form>
     </div>

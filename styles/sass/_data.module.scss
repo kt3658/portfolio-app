@@ -1,0 +1,93 @@
+.dataTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #993b5f;
+  height: 120px;
+  width: 100%;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+.dataText {
+  padding: 40px 20px;
+  font-size: 32px;
+  color: #fff;
+  height: 120px;
+  margin: auto;
+}
+
+.dataRight {
+  display: flex;
+}
+
+.dataAdmin {
+  margin-right: 16px;
+}
+
+
+.dataLogoutButton button {
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    width: 116px;
+    height: 64px;
+    background-color: #565A5C;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 36px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.dataLogoutButton button:hover {
+  color: #565A5C;
+  background-color: #fff;
+  border: 1px solid #565A5C;
+}
+
+.dataName {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  margin: 38px 0 0 38px;
+}
+
+.dataNameTitle {
+  margin-left: 160px;
+}
+
+.dataFuriganaTitle {
+  margin-left: 80px;
+}
+
+.dataCompanyTitle {
+  margin-left: 80px;
+}
+
+.dataMailTitle {
+  margin-left: 80px;
+}
+
+.dataAffairTitle {
+  margin-left: 80px;
+}
+
+.dataCorporatesStructureTitle {
+  margin-left: 60px;
+}
+
+.dataStatusTitle {
+  margin-left: 400px;
+}
+
+.dataDateTitle {
+  margin-left: 70px;
+}
+
+.dataEditDateTitle {
+  margin-left: 70px;
+  margin-top: 18px;
+}
+
+.dataUnderName {
+  margin-top: 8px;
+}

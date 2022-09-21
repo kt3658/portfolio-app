@@ -1,7 +1,13 @@
 .editTitleContainer {
-  background-color: #990F55;
+  background-color: #993b5f;
   height: 120px;
   width: 100%;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  @media screen and (max-width: 750px) {
+    width: 100%;
+  
+  }
 }
 
 .editTitle {
@@ -11,8 +17,8 @@
   font-size: 32px;
   color: #fff;
   height: 120px;
-  margin: auto;
   
+  margin: auto;
 }
 
 .editNameData {
@@ -23,16 +29,39 @@
   margin-right: 100px;
   border: 1px solid rgb(210, 201, 201);
   margin-top: 5px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  @media screen and (max-width: 1060px) {
+    padding-right: 100px;
+  
+  }
+  @media screen and (max-width: 750px) {
+    width: 82%;
+    margin-left: 42px;
+  
+  }
 }
 
 .editNameTitle {
   margin-top: 40px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
+  @media screen and (max-width: 750px) {
+    width: 88%;
+    margin-left: 42px;
+  
+  }
 }
 
 .editBox {
   display: flex;
   justify-content: space-around;
   margin-top: 16px;
+  @media screen and (max-width: 750px) {
+    display: block;
+  
+  }
 }
 
 
@@ -42,6 +71,10 @@
   justify-content: center;
   align-items: normal;
   margin-top: -8px;
+  @media screen and (max-width: 750px) {
+    display: block;
+    
+  }
 }
 
 .editPhoneData {
@@ -52,6 +85,11 @@
   margin-top: 5px;
   padding-right: 180px;
   margin-right: 100px;
+  @media screen and (max-width: 750px) {
+    width: 82%;
+    margin-left: 42px;
+    
+  }
 }
 
 .editPhoneData p {
@@ -63,16 +101,27 @@
 .editBox3 {
   text-align: center;
   margin-top: 32px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  @media screen and (max-width: 750px) {
+    text-align: center;
+
+  }
 }
 
 .editBox4 {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   text-align: center;
   margin-top: 32px;
 }
 
 .editBox5 {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   text-align: center;
   margin-top: 32px;
+
 }
 
 .editLargeBox {
@@ -85,14 +134,20 @@
 
 .editMessageText {
   padding-right: 440px;
+  @media screen and (max-width: 750px) {
+    padding-right: 186px;
+  }
 }
 
 .editButton {
+  
   text-align: center;
   display: block;
 }
 
 .editButton button {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   width: 188px;
   height: 60px;
   background-color: #979899;
@@ -106,4 +161,29 @@
   color: #979899;
   background-color: #fff;
   border: 1px solid #979899;
+}
+
+.backButton {
+  text-align: right;
+  display: block;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.backButton button {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  width: 188px;
+  height: 60px;
+  background-color: #87bccc;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.backButton button:hover {
+  color: #87bccc;
+  background-color: #fff;
+  border: 1px solid #87bccc;
 }

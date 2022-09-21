@@ -1,47 +1,40 @@
-import { useEffect,useState } from "react";
+
+import Image from "next/image";
+import scss from "../styles/sass/_admin.module.scss";
+import { auth } from "../lib/firebase";
+import { useRouter } from "next/router";
+import Link from 'next/link';
 
 export default function Admin() {
-
-  // const [actionCode, setActionCode] = useState('');
-
-  // const [password, setPassword] = useState('');
-
-  // const [mode, setMode] = useState('');
-
-  // useEffect(() => {
-  //   const queryParams = new URLSearchParams(window.location.search);
-  //   const oobCode = queryParams.get('oobCode') || '';
-  //   setMode(mode);
-  //   setActionCode(oobCode);
-  // }, [])
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-    
-  //   if(oobCode === '') return;// 取得できない場合処理終了
-
-  //   firebase
-  //     .auth()
-  //     .verifyPasswordResetCode(actionCode)
-  //     .then(() => {
-  //       firebase
-  //         .auth()
-  //         .confirmPasswordReset(actionCode, password)
-  //         .then(async (resp) => { console.log("success")
-  //           // 成功。ログイン画面などを表示するコードを足す場所
-  //         })
-  //         .catch((error) => {
-  //           console.log(error)
-  //         })
-  //     })
-  // }
+  const router = useRouter();
+  
   return (
     <>
-    <h2>管理者の名前 Ken</h2>
-    <button
-    >
-    パスワードの変更
-    </button>
+    <div className={scss.adminContainer}>
+    <div className={scss.adminBox}>
+    <Image className={scss.adminImage} src="/images/kkrn_icon_user_2.png" width="200" height="200"/>
+    
+    <p className={scss.adminName}>Administrator-name: KEN</p>
+    <p
+    className={scss.adminLogout}
+    onClick={async () => {
+      try {
+        await auth.signOut();
+        router.push("./Login");
+      } catch (error) {
+        alert(error.message);
+      }
+    }}
+    
+  >
+  ログアウト
+    
+    </p>
+    <Link href="./data">
+    <p className={scss.adminBack}>前のページに戻る</p>
+    </Link>
+    </div>
+    </div>
     </>
   )
 

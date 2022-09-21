@@ -409,9 +409,9 @@
 
 .contact {
   
-  background-color: #EDF2FA;
+  background-color: #c9d9e6;
   // padding-bottom: 64px;
-  padding-bottom: 40px;
+  padding-bottom: 82px;
   
 
   
@@ -477,4 +477,32 @@
   border: 1px solid #339C64;
 }
 
+.contactButtonFlex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contactAdminButton input {
+  width: 188px;
+  height: 60px;
+  background-color: #993b5f;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 32px;
+}
+
+.contactAdminButton input:hover {
+  color: #993b5f;
+  background-color: #fff;
+  border: 1px solid #993b5f;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 32px 0;
+  @media screen and (max-width: 750px) {
+    font-size: 0.8rem;
+  }
+}
 

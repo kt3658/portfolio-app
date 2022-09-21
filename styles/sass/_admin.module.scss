@@ -1,0 +1,52 @@
+
+.adminBox {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #e1e1e1;
+  padding: 40px;
+  border-top: solid 20px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+}
+
+.adminName {
+  text-align: center;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
+  
+}
+
+.adminLogout {
+  text-align: center;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", 
+}
+
+.adminLogout:hover{
+  color: #1c1c1c
+}
+
+.adminContainer {
+  background-color: white;
+  padding: 20px 500px;
+  margin: 2em 0;
+  color: #5d627b;
+  @media screen and (max-width: 1200px) {
+    padding: 20px 200px;
+  }
+  
+  @media screen and (max-width: 750px) {
+    padding: 20px 32px;
+  }
+  
+}
+
+.adminBack {
+  text-align: center;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", 
+}
+
+.adminBack:hover{
+  color: #1c1c1c
+}
+
+

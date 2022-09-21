@@ -163,34 +163,26 @@ export default function Main() {
       </section>
       
       
-      <section id="js-contact" className="contact fadein internal-links">
-        <div className="wrapper">
-          <h2 className="section-title">
-            <span className="en">Contact</span>
-            <span className="ja">お問い合わせ</span>
+      <section id="js-contact" className={`${scss.contact}`}>
+        <div className={scss.wrapper}>
+          <h2 className={scss['section-title']}>
+            <span className={scss.en}>Contact</span>
+            <span className={scss.ja}>お問い合わせ</span>
           </h2>
 
-          <div className="contact-container">
-            <dl>
-              <dt><label htmlFor="name">お名前<span>*</span></label></dt>
-              <dd><input type="text" id="name" name="your-name" placeholder="山田太郎"/></dd>
-              <dt><label htmlFor="email">メールアドレス<span>*</span></label></dt>
-              <dd><input type="email" id="email" name="your-email" placeholder="test@gmail.com"/></dd>
-              <dt><label htmlFor="message">お問い合わせ<span>*</span></label></dt>
-              <dd><textarea id="message" name="your-message" placeholder="お気軽にご相談ください。"></textarea></dd>
-              </dl>
-              <div className="contact-button"><input type="submit" value="送信する"/></div>
-            
+          <div className={scss['contact-container']}>
+            <div className={scss.contactButtonFlex}>
+              <div className={scss['contact-button']}><input type="submit" value="Contactページへ"/></div>
+              <div className={scss['contact-button']}><input type="submit" value="管理者ページへ"/></div>
+            </div>
           </div>
         </div>
       </section>
       
-      <section className="footer wrapper">
-      <p>Copyright©2022 KEN portfolio All rights reserved.</p>
-      </section>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
-      <script src="/js/main.js"></script>
+      <div className={`${scss.footer} ${scss.wrapper}`}>
+        <p>Copyright©2022 KEN portfolio All rights reserved.</p>
+      </div>
+    
       </>
     </main>
     
