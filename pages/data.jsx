@@ -156,7 +156,7 @@ export default function Data() {
     </div>
     
     
-    <div>
+    <div className={scss.dataContainer}>
       
       
       <select
@@ -183,13 +183,10 @@ export default function Data() {
         <span className={scss.dataMailTitle}>メールアドレス</span>
         <span className={scss.dataAffairTitle}>ご用件</span>
         <span className={scss.dataCorporatesStructureTitle}>事業形態</span>
-        <br />
-        <div className={scss.dataUnderName}>
-          <span className={scss.dataInquiryTitle}>お問い合わせ内容</span>
-          <span className={scss.dataStatusTitle}>対応状況</span>
-          <span className={scss.dataDateTitle}>送信日</span>
-          <span className={scss.dataEditDateTitle}>編集更新日</span>
-        </div>
+        <span className={scss.dataInquiryTitle}>お問い合わせ内容</span>
+        <span className={scss.dataStatusTitle}>対応状況</span>
+        <span className={scss.dataDateTitle}>送信日</span>
+        <span className={scss.dataEditDateTitle}>編集更新日</span>
       </div>
 
 

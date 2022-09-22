@@ -25,6 +25,11 @@ li {
   box-sizing: border-box;
 }
 
+  img {
+  max-width: 100%;
+  vertical-align: middle;
+  } 
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

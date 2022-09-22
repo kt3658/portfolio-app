@@ -52,7 +52,7 @@
 }
 
 .dataNameTitle {
-  margin-left: 160px;
+  margin-left: 180px;
 }
 
 .dataFuriganaTitle {
@@ -76,7 +76,7 @@
 }
 
 .dataStatusTitle {
-  margin-left: 400px;
+  margin-left: 40px;
 }
 
 .dataDateTitle {
@@ -85,9 +85,12 @@
 
 .dataEditDateTitle {
   margin-left: 70px;
-  margin-top: 18px;
 }
 
-.dataUnderName {
-  margin-top: 8px;
+.dataContainer {
+  white-space: nowrap;
+  overflow-x: scroll;
+  border: solid 0.01px #696969;
+  height: 100%;
 }
+
