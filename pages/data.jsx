@@ -175,12 +175,13 @@ export default function Data() {
         <option value="done">対応済み</option>
       </select>
       
-      <div class={scss.dataName}>
+      <div className={scss.dataName}>
         <span className={scss.dataIDTitle}>固有ID</span>
         <span className={scss.dataNameTitle}>氏名</span>
         <span className={scss.dataFuriganaTitle}>ふりがな</span>
         <span className={scss.dataCompanyTitle}>会社・組織名</span>
         <span className={scss.dataMailTitle}>メールアドレス</span>
+        <span className={scss.dataTelTitle}>電話番号</span>
         <span className={scss.dataAffairTitle}>ご用件</span>
         <span className={scss.dataCorporatesStructureTitle}>事業形態</span>
         <span className={scss.dataInquiryTitle}>お問い合わせ内容</span>
@@ -195,9 +196,9 @@ export default function Data() {
             formが登録されていません
           </p>  
             :
-          <ul> 
+          <ul className={scss.dataForms}> 
         {filteredForms?.map((form) =>(
-          <li key={form.id}>
+          <li className={scss.dataList} key={form.id}>
             
             <Link href = {{ pathname: "/show", 
             query: { 
@@ -206,16 +207,17 @@ export default function Data() {
             corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,createdAt:form.createdAt,
             updatedAt: form.updatedAt,status: form.status }}}>
             <span>{form.id}</span></Link>
-            <span>{form.names}</span>
-            <span>{form.furigana}</span>
-            <span>{form.company}</span>
-            <span>{form.email}</span>
-            <span>{form.tel}</span>
-            <span>{form.affair}</span>
-            <span>{form.corporatesStructure}</span>
-            <span>{form.inquiry}</span>
+            <span className={scss.dataNameForm}>{form.names}</span>
+            <span className={scss.dataFuriganaForm}>{form.furigana}</span>
+            <span className={scss.dataCompanyForm}>{form.company}</span>
+            <span className={scss.dataMailForm}>{form.email}</span>
+            <span className={scss.dataTelForm}>{form.tel}</span>
+            <span className={scss.dataAffairForm}>{form.affair}</span>
+            <span className={scss.dataCorporatesStructureForm}>{form.corporatesStructure}</span>
+            <span className={scss.dataInquiryForm}>{form.inquiry}</span>
             
-            <select 
+            <span className={scss.dataStatusForm}>
+            <select
                 value={form.status}
                 onChange={(e) => handleStatusChange(form,e)}
                 >
@@ -223,21 +225,28 @@ export default function Data() {
                 <option value="doing">対応中</option>
                 <option value="done">対応済み</option>  
             </select>
-            <span>{form.createdAt}</span>
-            <span>{form.updatedAt}</span>
-            <button
+            </span>
+            <span className={scss.dataDateForm}>{form.createdAt}</span>
+            <span className={scss.dataEditDateForm}>{form.updatedAt}</span>
+            
+            <span>
+            <button 
               onClick={() => handleDeleteForm(form)}
               >削除
             </button>
+            </span>
+            
             
             <Link href={{ pathname: "/edit", 
             query: { 
             id: form.id, names: form.names, furigana: form.furigana,
             company: form.company, email: form.email,tel: form.tel,
             affair: form.affair,corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,updatedAt: form.updatedAt}}}>
-            <button>
-              編集
-            </button>
+            <span>
+              <button>
+                編集
+              </button>
+            </span>
             </Link>
           </li>
           ))

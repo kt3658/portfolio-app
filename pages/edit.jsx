@@ -103,6 +103,7 @@ export default function Edit() {
         <input
           className={scss.editNameData}
           type="text"
+          maxLength="11"
           label="新しいタイトル"
           placeholder="山田太郎"
           value={newCustomerName}

@@ -56,31 +56,35 @@
 }
 
 .dataFuriganaTitle {
-  margin-left: 80px;
+  margin-left: 150px;
 }
 
 .dataCompanyTitle {
-  margin-left: 80px;
+  margin-left: 164px;
 }
 
 .dataMailTitle {
-  margin-left: 80px;
+  margin-left: 130px;
 }
 
 .dataAffairTitle {
-  margin-left: 80px;
+  margin-left: 120px;
 }
 
 .dataCorporatesStructureTitle {
-  margin-left: 60px;
+  margin-left: 128px;
+}
+
+.dataInquiryTitle {
+  margin-left: 120px;
 }
 
 .dataStatusTitle {
-  margin-left: 40px;
+  margin-left: 102px;
 }
 
 .dataDateTitle {
-  margin-left: 70px;
+  margin-left: 60px;
 }
 
 .dataEditDateTitle {
@@ -91,6 +95,51 @@
   white-space: nowrap;
   overflow-x: scroll;
   border: solid 0.01px #696969;
-  height: 100%;
+  height: 100vh;
 }
 
+
+
+.dataForms span {
+  display: inline-block;
+  width: 14.2em;
+  overflow-x: scroll;
+  
+}
+
+.dataFuriganaForm {
+  margin-left: -44px;  
+}
+
+.dataTelTitle {
+  margin-left: 116px;
+}
+
+.dataCorporatesStructureForm {
+  margin-left: -52px;
+}
+
+.dataAffairForm {
+  margin-left: -41px;
+}
+
+// .dataList {
+//   background-color: #F9F0F5;
+//   width: 100%;
+// }
+
+.dataInquiryForm {
+  margin-left: -43px;
+}
+
+.dataDateForm {
+  margin-left: -103px;
+}
+
+.dataEditDateForm {
+  margin-left: -108px;
+}
+
+.dataStatusForm select {
+  border-radius: 5px;
+}

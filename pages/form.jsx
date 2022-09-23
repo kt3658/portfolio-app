@@ -112,6 +112,7 @@ export default function Form() {
             type="text" 
             id="names"
             placeholder="山田太郎" 
+            maxLength="11"
             name="customername"
             required="required"
             value={customerName}
