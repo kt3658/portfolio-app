@@ -17,11 +17,49 @@
   text-align: center;
   height: 884px;
   width: 1040px;
+  @media screen and (max-width: 1025px) {
+    width: 984px;
+    margin-top: 56px;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 912px) {
+    width: 872px;
+    height: 600px;
+    margin-top: 56px;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 820px) {
+    width: 780px;
+    height: 600px;
+    margin-top: 56px;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 728px;
+    height: 600px;
+    margin-top: 56px;
+    object-fit: cover;
+  }
+
   @media screen and (max-width: 750px) {
     width: 345px;
     height: 320px;
     margin-top: 56px;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 320px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 280px;
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 255px;
+  
   }
 }
 
@@ -33,9 +71,9 @@
   margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
-  font-size: 2.4rem;
+  font-size: 24px;
   @media screen and (max-width: 750px) {
-    font-size: 1.6rem;
+    font-size: 16px;
     margin-top: 32px;
   }
 }
@@ -55,12 +93,23 @@
 }
 
 .secondlayer-container dd {
-  width: 78%;
+  width: 74%;
   padding-left: 64px;
+  @media screen and (max-width: 1040px) {
+    width: 72%;
+  }
   @media screen and (max-width: 750px) {
     padding-left: 34px;
-    width: 74%;
+    width: 62%;
   }
+  @media screen and (max-width: 364px) {
+    width: 58%;
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 58%;
+  }
+
 }
 
 .secondlayer-container dd:nth-of-type(2) {
@@ -102,4 +151,43 @@ border-radius: 10px;
 background-color: #fff;
 color: #339C64;
 border: 1px solid #339C64;
+}
+
+.worksunder-textbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 46px;
+}
+
+.worksunder-title {
+  font-size: 48px;
+  color: #fff;
+  border: 1px solid #339C64;
+  background-color: #339C64;
+  border-width: 12.5px;
+  @media screen and (max-width: 750px) {
+    font-size: 32px;
+    border-width: 5px;
+    }
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 750px) {
+    max-width: 375px;
+    padding: 0 15px;
+    }
+  
+}
+
+.footer p {
+  font-size: 12px;
+  text-align: center;
+  padding: 32px 0;
+  @media screen and (max-width: 750px) {
+    font-size: 8px;
+  }
 }

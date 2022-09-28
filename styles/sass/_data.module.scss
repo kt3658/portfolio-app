@@ -15,10 +15,19 @@
   color: #fff;
   height: 120px;
   margin: auto;
+  @media screen and (max-width: 750px) {
+    padding: 30px 12px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 38px 8px;
+    font-size: 16px;
+  }
 }
 
 .dataRight {
   display: flex;
+  align-items: center;
 }
 
 .dataAdmin {
@@ -34,9 +43,18 @@
     background-color: #565A5C;
     color: #fff;
     border-radius: 10px;
-    margin-top: 36px;
     margin-right: 20px;
     font-size: 16px;
+    @media screen and (max-width: 750px) {
+      width: 70px;
+      height: 45px;
+      margin-top: 0;
+    }
+    @media screen and (max-width: 375px) {
+      width: 46px;
+      height: 50px;
+      font-size: 6px;
+    }
 }
 
 .dataLogoutButton button:hover {
@@ -98,12 +116,20 @@
   height: 100vh;
 }
 
+.dataForms {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  background-color: #F9F0F5;
+  width: 100%;
+  min-width: 2550px;
+}
 
 
 .dataForms span {
   display: inline-block;
   width: 14.2em;
   overflow-x: scroll;
+
   
 }
 
@@ -142,4 +168,60 @@
 
 .dataStatusForm select {
   border-radius: 5px;
+}
+
+.dataDeleteButton {
+  margin-left: -112px;
+}
+
+.dataDeleteButton button {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  width: 50px;
+  background-color: #ce2916;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  border-color: white;
+}
+
+.dataDeleteButton button:hover {
+  color: white;
+  background-color: #ce1d16;
+  border: 1px solid #979899;
+}
+
+.dataEditButton {
+  margin-left: -175px;
+}
+
+.dataEditButton button {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  width: 50px;
+  background-color: #696565;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  border-color: white;
+}
+
+.dataSortButton select {
+  margin: 40px 0 0 20px;
+  border-radius: 5px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  height: 24px;
+  background-color: #b0757a;
+  color: white;
+}
+
+.dataStatusButton select {
+  margin: 40px 0 0 8px;
+  border-radius: 5px;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  height: 24px;
+  background-color: #605253;
+  color: white
 }

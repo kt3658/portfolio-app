@@ -158,22 +158,26 @@ export default function Data() {
     
     <div className={scss.dataContainer}>
       
-      
-      <select
-        value={sort}
-        onChange={(e) => sortFormByDate(e)}>
-        <option>作成日でソート</option>
-        <option value="asc">昇順</option>
-        <option value="desk">降順</option>
-      </select>
-      <select
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}>
-        <option value="all">全て</option>
-        <option value="notStarted">未対応</option>
-        <option value="doing">対応中</option>
-        <option value="done">対応済み</option>
-      </select>
+      <span className={scss.dataSortButton}>
+        <select
+          value={sort}
+          onChange={(e) => sortFormByDate(e)}>
+          <option>作成日でソート</option>
+          <option value="asc">昇順</option>
+          <option value="desk">降順</option>
+        </select>
+      </span>
+
+      <span className={scss.dataStatusButton}>
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}>
+          <option value="all">全て</option>
+          <option value="notStarted">未対応</option>
+          <option value="doing">対応中</option>
+          <option value="done">対応済み</option>
+        </select>
+      </span>
       
       <div className={scss.dataName}>
         <span className={scss.dataIDTitle}>固有ID</span>
@@ -229,11 +233,11 @@ export default function Data() {
             <span className={scss.dataDateForm}>{form.createdAt}</span>
             <span className={scss.dataEditDateForm}>{form.updatedAt}</span>
             
-            <span>
-            <button 
-              onClick={() => handleDeleteForm(form)}
-              >削除
-            </button>
+            <span className={scss.dataDeleteButton}>
+              <button 
+                onClick={() => handleDeleteForm(form)}
+                >削除
+              </button>
             </span>
             
             
@@ -242,7 +246,7 @@ export default function Data() {
             id: form.id, names: form.names, furigana: form.furigana,
             company: form.company, email: form.email,tel: form.tel,
             affair: form.affair,corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,updatedAt: form.updatedAt}}}>
-            <span>
+            <span className={scss.dataEditButton}>
               <button>
                 編集
               </button>

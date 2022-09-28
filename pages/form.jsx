@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import React, { useState } from 'react'
 import { db } from "../lib/firebase";
 import { useRecoilState } from "recoil";
 import { formState } from '../component/atom';
 import dayjs from 'dayjs';
 import scss from "../styles/sass/_contact.module.scss";
 import Head from 'next/head';
-
+import React, {useState} from "react";
 
 export default function Form() {
   const [customerName, setCustomerName] = useState("")
@@ -25,7 +24,10 @@ export default function Form() {
 
   const handleChange = e => setBusinessForm(e.target.value);
 
-  
+  const [openMenu, setOpenMenu] = useState(false);
+  const menuFunction = () => {
+    setOpenMenu(!openMenu);
+  }
 
 
   const handleSubmit = (e) => {
@@ -91,8 +93,81 @@ export default function Form() {
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
     <link rel="stylesheet" href="../styles/sass/_contact.module.scss"/>
     <link rel="stylesheet" href="css/style.min.css"/> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css"/>  
+    {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css"/>   */}
   </Head>
+
+  <section id="js-header" className={scss.header}>
+      <div className={`${scss.wrapper}  ${scss['header-container']}`}>
+        <h1 className={scss['site-title']}>
+          <a href="#">KEN PORTFOLIO</a>
+        </h1>
+
+        <nav className={scss['header-nav']} id="js-header-nav">
+          <ul className={scss['header-ul']}>
+            <li><a href="http://localhost:3000/#">Home</a></li>
+            <li><a href="http://localhost:3000/#js-service">Service</a></li>
+            <li><a href="http://localhost:3000/#js-about">About</a></li>
+            <li><a href="http://localhost:3000/#js-works">Works</a></li>
+            <li><a href="http://localhost:3000/#js-contact">Contact</a></li>  
+          </ul>
+        </nav>
+        
+        
+        <header id="header" className={scss.header}>
+          <div className={scss.container}>
+          <div className={scss.humburger} onClick={() => menuFunction()}>
+            <span className={openMenu ? scss.open : undefined}></span>
+            <span className={openMenu ? scss.open : undefined}></span>
+            <p className={openMenu ? scss.open : undefined}>Menu</p>
+          </div>
+        </div>
+      </header>
+      <div className={`${scss.drawerMenu} ${openMenu ? scss.open : undefined}`}>
+        <ul>
+          <div className={scss.close} onClick={() => menuFunction()}>
+            <span></span>
+            <span></span>
+            <p>Close</p>
+          </div>
+          <li>
+            <Link href="#">
+              <a>
+                <p className={scss.mainTitle}>Home</p>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#js-service">
+            <a>
+              <p className={scss.mainTitle}>Service</p>
+            </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#js-about">
+            <a>
+              <p className={scss.mainTitle}>About</p>
+            </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#js-works">
+            <a>
+              <p className={scss.mainTitle}>Works</p>
+            </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#js-contact">
+            <a>
+              <p className={scss.mainTitle}>Contact</p>   
+            </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </section>
 
   
   

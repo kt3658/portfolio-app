@@ -1,5 +1,5 @@
 .worksunder-mainvisual {
-    background-image: url(../img/works-main.jpg);
+    background-image: url(/images/works-main.jpg);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -19,22 +19,27 @@
   }
 
   .worksunder-title {
-    font-size: 4.8rem;
+    font-size: 48px;
     color: #fff;
     border: 1px solid #339C64;
     background-color: #339C64;
     border-width: 12.5px;
     @media screen and (max-width: 750px) {
-      font-size: 3.2rem;
+      font-size: 32px;
       border-width: 5px;
       }
   }
 
   .worksunder-block {
     margin-top: 78px;
+    margin-left: -40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media screen and (max-width: 1000px) {
+      display: block;
+      text-align: center;
+    }
     @media screen and (max-width: 750px) {
       margin-top: 0;
     }
@@ -73,7 +78,7 @@
     }
   }
 
-  .worksunder-list a:hover {
+  .worksunder-list:hover {
     opacity: 0.5;
   }
 
@@ -112,7 +117,7 @@
   
   .worksunder-pagenation {
     margin-top: 64px;
-    font-size: 2.0rem;
+    font-size: 20px;
     padding-right: 20px;
     @media screen and (max-width: 750px) {
       margin-top: 80px;
@@ -121,20 +126,20 @@
   }
 
   .worksunder-pagenation2 {
-    margin-top: 64px;
-    font-size: 2.0rem;
+    margin-top: 62px;
+    font-size: 20px;
     padding-left: 30px;
     @media screen and (max-width: 750px) {
-      margin-top: 80px;
+      margin-top: 78px;
       padding-bottom: 46px;
     }
   }
 
-  .worksunder-pagenation a:hover {
+  .worksunder-pagenation:hover {
     opacity: 0.5;
   }
 
-  .worksunder-pagenation2 a:hover {
+  .worksunder-pagenation2:hover {
     opacity: 0.5;
   }
   
@@ -144,4 +149,57 @@
   }
   
 
-
+  .section-title {
+    font-weight: normal;
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .section-title .en {
+    font-size: 32px;
+    display: block;
+  }
+  
+  .section-title .ja {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-title .ja:before,
+  .section-title .ja:after {
+    content: "";
+    width: 8px;
+    border-top: 1px solid;
+  }
+  
+  .section-title .ja:before {
+    margin-right: 5px;
+  }
+  
+  .section-title .ja:after {
+    margin-left: 1px;
+  }
+  
+  .wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media screen and (max-width: 750px) {
+      max-width: 375px;
+      padding: 0 15px;
+      }
+    
+  }
+  
+  .footer p {
+    font-size: 12px;
+    text-align: center;
+    padding: 32px 0;
+    @media screen and (max-width: 750px) {
+      font-size: 8px;
+    }
+  }
