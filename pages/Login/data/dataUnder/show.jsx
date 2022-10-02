@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from 'next/link';
-import scss from "../styles/sass/_show.module.scss";
+import scss from "../../../../styles/sass/_show.module.scss";
 export default function Show() {
   const router = useRouter();
   return (
@@ -15,7 +15,7 @@ export default function Show() {
       <div className={scss.showBox1}>
         <div className={scss.showNameContainer}>
           <span className={scss.showFurigana}>{router.query.furigana}</span>
-          <div className={scss.showName}><input value={router.query.names}/></div>
+          <div className={scss.showName}><input value={router.query.names} readOnly={true}/></div>
         </div>
       
         <div className={scss.showStatusContainer}>
@@ -24,9 +24,9 @@ export default function Show() {
       </div>
       
       <div className={scss.showBox2}>
-        <p className={scss.showCompany}><input value={router.query.company}/></p>
-        <p className={scss.showEmail}><input value={router.query.email}/></p>
-        <p className={scss.showTel}><input value={router.query.tel}/></p>
+        <p className={scss.showCompany}><input value={router.query.company} readOnly={true}/></p>
+        <p className={scss.showEmail}><input value={router.query.email} readOnly={true}/></p>
+        <p className={scss.showTel}><input value={router.query.tel} readOnly={true}/></p>
       </div>
       
       <div className={scss.showBox3}>
@@ -35,7 +35,7 @@ export default function Show() {
       </div>
       
       <div className={scss.showBox4}>
-        <p>お問い合わせ内容：<textarea value={router.query.inquiry}/></p>
+        <p>お問い合わせ内容：<textarea value={router.query.inquiry} readOnly={true}/></p>
       </div>
       
       <div className={scss.showBox5}>
@@ -48,7 +48,7 @@ export default function Show() {
       </div>
     </div>
 
-      <Link href={{ pathname: "/edit", 
+      <Link href={{ pathname: "./edit", 
         query: { 
         id: router.query.id, names: router.query.names, furigana: router.query.furigana,
         company: router.query.company, email: router.query.email,tel: router.query.tel,
@@ -60,7 +60,7 @@ export default function Show() {
         </div>
       </Link>
       
-      <Link href="./data">
+      <Link href="../data">
         <div className={scss.showBackButton}>
           <button 
               >

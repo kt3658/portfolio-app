@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import { useRecoilState } from "recoil";
-import { formState } from '../component/atom';
-import { db } from "../lib/firebase";
+import { formState } from '../../../../component/atom';
+import { db } from "../../../../lib/firebase";
 import dayjs from 'dayjs';
-import scss from "../styles/sass/_edit.module.scss";
+import scss from "../../../../styles/sass/_edit.module.scss";
 import Head from 'next/head';
 
 
@@ -94,7 +94,7 @@ export default function Edit() {
     <div className={scss.editTitleContainer}>
     <p className={scss.editTitle}>FormDataEdit</p>
     </div>
-      <div>
+      <div className={scss.container}>
         <div className={scss.editBox}>
         
         <div className={scss.editContainer}>
@@ -123,19 +123,24 @@ export default function Edit() {
           onChange={handleEditFuriganaChange}  
         />
         </div>
+      </div>
+      <div className={scss.editBox1}>
+        <div className={scss.editContainer1}>
+          <span>
+          <dt className={scss.editCompanyTitle}>会社・組織名</dt>
+          
+          <input 
+            className={scss.editCompanyData}
+            type="text"
+            label="新しいタイトル"
+            placeholder="山田株式会社"
+            value={newCompanyName}
+            onChange={handleEditCompanyChange}  
+          />
         
-        <div className={scss.editContainer}>
-        <dt className={scss.editNameTitle}>会社・組織名</dt>
-        <input 
-          className={scss.editNameData}
-          type="text"
-          label="新しいタイトル"
-          placeholder="山田株式会社"
-          value={newCompanyName}
-          onChange={handleEditCompanyChange}  
-        />
+          </span>
         </div>
-        </div>
+      </div>
         
         <div className={scss.editBox2}>
         <div className={scss.editContainer2}>
@@ -144,7 +149,7 @@ export default function Edit() {
           className={scss.editPhoneData} 
           type="text"
           label="新しいタイトル"
-          placeholder="sample@sample.com"
+          placeholder="aa@aa.com"
           value={newMail}
           onChange={handleEditMailChange}  
         />
@@ -250,7 +255,7 @@ export default function Edit() {
           onChange={handleEditMessageChange}  
         />
         </div>
-        <Link href={{ pathname: "/data", query: { names: newCustomerName, furigana: newFuriganaName,company: newCompanyName, email: newMail,affair: newRequirement,corporatesStructure: newBusinessForm,updatedAt: newUpdate } }}>
+        <Link href={{ pathname: "../data", query: { names: newCustomerName, furigana: newFuriganaName,company: newCompanyName, email: newMail,affair: newRequirement,corporatesStructure: newBusinessForm,updatedAt: newUpdate } }}>
           <div className={scss.editButton}>
           <button 
             onClick={handleEditForm}>
@@ -259,7 +264,7 @@ export default function Edit() {
           </div>
         </Link>
         <div className={scss.backButton}>
-        <Link href="./data">
+        <Link href="../data">
           <button 
             >
               前のページに戻る

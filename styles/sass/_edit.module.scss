@@ -21,24 +21,53 @@
   margin: auto;
 }
 
+
+
 .editNameData {
   height: 60px;
-  width: 100%;
+  width: 95%;
   border-radius: 5px;
   padding-right: 180px;
-  margin-right: 100px;
+  margin-right: 110px;
   border: 1px solid rgb(210, 201, 201);
   margin-top: 5px;
+  padding-left: 6px;
   font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
   "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   @media screen and (max-width: 1060px) {
-    padding-right: 100px;
-  
+    margin-right: 290px;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 1024px) {
+    margin-right: 100px;
+  }
+  @media screen and (max-width: 912px) {
+    margin-right: 60px;
+  }
+  @media screen and (max-width: 820px) {
+    margin-right: 40px;
+  }
+  @media screen and (max-width: 768px) {
     width: 82%;
     margin-left: 42px;
+    margin-right: 0;
   
+  }
+  @media screen and (max-width: 393px) {
+    margin-left: 36px;
+    
+  }
+  @media screen and (max-width: 375px) {
+    width: 76%;
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 88%;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 100%;
+    margin-left: 2px;
   }
 }
 
@@ -46,22 +75,44 @@
   margin-top: 40px;
   font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
   "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-
+  @media screen and (max-width: 768px) {
+    margin-left: 40px;
+  
+  }
   @media screen and (max-width: 750px) {
     width: 88%;
     margin-left: 42px;
+  
+  }
+  @media screen and (max-width: 393px) {
+    margin-left: 36px;
+  
+  }
+  @media screen and (max-width: 320px) {
+    width: 88%;
+    margin-left: 22px;
+  
+  }
+  @media screen and (max-width: 280px) {
+    margin-left: 4px;
   
   }
 }
 
 .editBox {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 16px;
   @media screen and (max-width: 750px) {
     display: block;
   
   }
+}
+
+
+
+.editBox1 {
+  text-align: center;
 }
 
 
@@ -77,19 +128,150 @@
   }
 }
 
+.editCompanyData {
+  margin: 0 auto;
+  width: 38%;
+  height: 60px;
+  border-radius: 5px;
+  padding-right: 180px;
+  padding-left: 6px;
+  border: 1px solid rgb(210, 201, 201);
+  @media screen and (max-width: 750px) {
+    width: 82%;
+    margin-left: 14px;
+  
+  }
+  @media screen and (max-width: 540px) {
+    margin-left: -12px;
+  }
+  @media screen and (max-width: 393px) {
+    margin-left: 3px;
+  
+  }
+  @media screen and (max-width: 375px) {
+    width: 77%;
+    margin-left: -5px;
+  
+  }
+  @media screen and (max-width: 320px) {
+    width: 88%;
+    margin-left: 2px;
+  
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 100%;
+  }
+}
+
 .editPhoneData {
   height: 60px;
-  width: 88%;
+  width: 95%;
   border-radius: 5px;
   border: 1px solid rgb(210, 201, 201);
   margin-top: 5px;
   padding-right: 180px;
-  margin-right: 100px;
-  @media screen and (max-width: 750px) {
+  margin-right: 110px;
+  padding-left: 6px;
+  @media screen and (max-width: 1024px) {
+  
+    margin-right: 100px;
+  }
+  @media screen and (max-width: 912px) {
+    margin-right: 60px;
+  }
+  @media screen and (max-width: 820px) {
+  
+    margin-right: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
     width: 82%;
     margin-left: 42px;
+    margin-right: 0;
+  }
+  @media screen and (max-width: 393px) {
+    margin-left: 36px;
     
   }
+  @media screen and (max-width: 375px) {
+    width: 76%;
+    
+  }
+  @media screen and (max-width: 320px) {
+    width: 88%;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 100%;
+    margin-left: 2px;
+  }
+}
+
+.editCompanyTitle {
+  margin: 40px 446px 4px 0;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  @media screen and (max-width: 1400px) {
+    margin: 40px 446px 4px 0;
+    
+  }
+  @media screen and (max-width: 1280px) {
+    margin: 40px 394px 4px 0;
+    
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 40px 292px 4px 0;
+  }
+  @media screen and (max-width: 912px) {
+    margin: 40px 254px 4px 0;
+  }
+  @media screen and (max-width: 820px) {
+    margin: 40px 212px 4px 0;   
+  }
+  @media screen and (max-width: 768px) {
+    margin: 40px 200px 4px 0;   
+  }
+  @media screen and (max-width: 750px) {
+    margin: 40px 206px 4px 0;
+    
+  }
+  @media screen and (max-width: 540px) {
+    margin: 40px 358px 4px 0;
+    
+  }
+  @media screen and (max-width: 414px) {
+    margin: 40px 230px 4px 0;
+    
+  }
+  @media screen and (max-width: 393px) {
+    margin: 40px 220px 4px 0;
+    
+  }
+  @media screen and (max-width: 384px) {
+    margin: 40px 206px 4px 0;
+    
+  }
+  @media screen and (max-width: 375px) {
+    margin: 40px 196px 4px 0;
+    
+  }
+
+  @media screen and (max-width: 360px) {
+    margin: 40px 184px 4px 0;
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    margin: 40px 184px 4px 0;
+    
+  }
+  @media screen and (max-width: 280px) {
+    margin: 40px 176px 4px 0;
+    
+  }
+
 }
 
 .editPhoneData p {
@@ -105,7 +287,21 @@
   "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   @media screen and (max-width: 750px) {
     text-align: center;
+    width: 74%;
+    margin-left: 56px;
+  }
 
+  @media screen and (max-width: 360px) {
+    text-align: center;
+    width: 74%;
+    margin-left: 46px;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin-left: 42px;
+  }
+  @media screen and (max-width: 280px) {
+    margin-left: 40px;
   }
 }
 
@@ -114,6 +310,22 @@
   "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   text-align: center;
   margin-top: 32px;
+  @media screen and (max-width: 750px) {
+    text-align: center;
+    width: 74%;
+    margin-left: 56px;
+    @media screen and (max-width: 360px) {
+      text-align: center;
+      width: 74%;
+      margin-left: 46px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    margin-left: 42px;
+  }
+  @media screen and (max-width: 280px) {
+    margin-left: 40px;
+  }
 }
 
 .editBox5 {
@@ -130,14 +342,58 @@
   height: 140px;
   margin-top: 8px;
   border-radius: 5px;
+  padding-left: 6px;
+  @media screen and (max-width: 912px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 820px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 53%;
+  }
+  @media screen and (max-width: 540px) {
+    width: 58%;
+  }
+  @media screen and (max-width: 414px) {
+    width: 74%;
+  }
+  @media screen and (max-width: 393px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 384px) {
+    width: 77%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 88%;
+  }
+  @media screen and (max-width: 280px) {
+    width: 100%;
+    margin-left: 2px;
+  }
 }
 
 .editMessageText {
   padding-right: 440px;
+  @media screen and (max-width: 1280px) {
+    padding-right: 394px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-right: 286px;
+  }
   @media screen and (max-width: 750px) {
     padding-right: 186px;
   }
+  @media screen and (max-width: 384px) {
+    padding-right: 159px;
+  }
+  @media screen and (max-width: 375px) {
+    padding-right: 152px;
+  }
 }
+
 
 .editButton {
   
@@ -168,6 +424,10 @@
   display: block;
   margin-right: 40px;
   margin-bottom: 40px;
+  @media screen and (max-width: 750px) {
+    text-align: center;
+    margin-right: 0;
+  }
 }
 
 .backButton button {
@@ -186,5 +446,13 @@
   color: #87bccc;
   background-color: #fff;
   border: 1px solid #87bccc;
+}
+
+.container input::placeholder {
+  color: #ccc;
+}
+
+.container textarea::placeholder {
+  color: #ccc;
 }
 

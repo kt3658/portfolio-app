@@ -1,13 +1,13 @@
-import { db } from "../lib/firebase";
-import { useEffect, useState } from "react";
+import { db } from "../../../lib/firebase";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { useRecoilState } from "recoil";
-import { formState } from '../component/atom';
-import { auth } from "../lib/firebase";
+import { formState } from '../../../component/atom';
+import { auth } from "../../../lib/firebase";
 import React from "react";
 import Link from "next/link";
 import dayjs from 'dayjs';
 import { useRouter } from "next/router";
-import scss from "../styles/sass/_data.module.scss";
+import scss from "../../../styles/sass/_data.module.scss";
 import Image from "next/image";
 
 export default function Data() {
@@ -17,11 +17,11 @@ export default function Data() {
   const [filteredForms, setFilteredForms] = useState([]);
   const [filter, setFilter] = useState("all");
   const [sort, setSort] = useState("");
-  
+  const [user, setUser] = useState("");
   
   useEffect(()=> {
     const unSub = auth.onAuthStateChanged((user)=> {
-      !user && router.push("./Login");
+      !user && router.push("../Login");
     });
     return ()=> unSub();
   })
@@ -121,17 +121,26 @@ export default function Data() {
 
 }
 
+useLayoutEffect(() => {
+  const unSub = auth.onAuthStateChanged((user) => {
+    setUser(user);
+    !user && router.push("../Login");
+  });
+  return () => unSub();
+});
 
 
 
   return (
+    <>
+    {user && ( 
     <>
     <div className={scss.dataTitle}>
       <div>
         <p className={scss.dataText}>DATA ADMINISTRATOR</p>
       </div>
       <div className={scss.dataRight}>
-        <Link href="admin">
+        <Link href="./dataUnder/admin">
           <p className={scss.dataAdmin}>
             <Image src="/images/kkrn_icon_user_2.png" width="100" height="100"/>
           </p>
@@ -142,7 +151,7 @@ export default function Data() {
             onClick={async () => {
               try {
                 await auth.signOut();
-                router.push("./Login");
+                router.push("../Login");
               } catch (error) {
                 alert(error.message);
               }
@@ -204,13 +213,13 @@ export default function Data() {
         {filteredForms?.map((form) =>(
           <li className={scss.dataList} key={form.id}>
             
-            <Link href = {{ pathname: "/show", 
+            <Link href = {{ pathname: "./dataUnder/show", 
             query: { 
             id: form.id, names: form.names, furigana: form.furigana,
             company: form.company,email: form.email,tel: form.tel,affair:form.affair,
             corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,createdAt:form.createdAt,
             updatedAt: form.updatedAt,status: form.status }}}>
-            <span>{form.id}</span></Link>
+            <span className={scss.dataIDForm}>{form.id}</span></Link>
             <span className={scss.dataNameForm}>{form.names}</span>
             <span className={scss.dataFuriganaForm}>{form.furigana}</span>
             <span className={scss.dataCompanyForm}>{form.company}</span>
@@ -241,16 +250,16 @@ export default function Data() {
             </span>
             
             
-            <Link href={{ pathname: "/edit", 
-            query: { 
-            id: form.id, names: form.names, furigana: form.furigana,
-            company: form.company, email: form.email,tel: form.tel,
-            affair: form.affair,corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,updatedAt: form.updatedAt}}}>
-            <span className={scss.dataEditButton}>
-              <button>
-                編集
-              </button>
-            </span>
+            <Link href={{ pathname: "./dataUnder/edit", 
+              query: { 
+              id: form.id, names: form.names, furigana: form.furigana,
+              company: form.company, email: form.email,tel: form.tel,
+              affair: form.affair,corporatesStructure: form.corporatesStructure,inquiry: form.inquiry,updatedAt: form.updatedAt}}}>
+              <span className={scss.dataEditButton}>
+                <button>
+                  編集
+                </button>
+              </span>
             </Link>
           </li>
           ))
@@ -258,7 +267,10 @@ export default function Data() {
       </ul>
       } 
       </div>
+      </>
+    )}
     </>
+    
   )
 
 }

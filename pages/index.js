@@ -271,7 +271,7 @@ export default function Main() {
           <div className={scss['contact-container']}>
             <div className={scss.contactButtonFlex}>
               <Link href="form"><div className={scss['contact-button']}><input type="submit" value="Contactページへ"/></div></Link>
-              <Link href="Login"><div className={scss.contactAdminButton}><input type="submit" value="管理者ページへ"/></div></Link>
+              <Link href="Login/Login"><div className={scss.contactAdminButton}><input type="submit" value="管理者ページへ"/></div></Link>
             </div>
           </div>
         </div>

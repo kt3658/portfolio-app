@@ -25,6 +25,8 @@
   font-size: 8px;
 }
 
+
+
 .showBox1 {
   display: flex;
   justify-content: space-evenly;
@@ -232,7 +234,7 @@
 .showBox1 div input {
   border-radius: 5px;
   height: 48px;
-  width: 100%;
+  width: 102%;
   border: 1px solid rgb(210, 201, 201);
   margin-top: 5px;
   font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", 
@@ -262,6 +264,11 @@
   }
 }
 
+.showContainer input {
+  padding-left: 6px;
+}
 
-
+.showContainer textarea {
+  padding-left: 6px;
+}
 
