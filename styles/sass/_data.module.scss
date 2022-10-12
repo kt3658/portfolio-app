@@ -73,12 +73,10 @@
   margin-left: 180px;
 }
 
-.dataFuriganaTitle {
-  margin-left: 150px;
-}
+
 
 .dataCompanyTitle {
-  margin-left: 164px;
+  margin-left: 160px;
 }
 
 .dataMailTitle {
@@ -121,7 +119,7 @@
     "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   background-color: #F9F0F5;
   width: 100%;
-  min-width: 2550px;
+  min-width: 2230px;
 }
 
 
@@ -137,9 +135,10 @@
   text-decoration: underline;
 }
 
-.dataFuriganaForm {
-  margin-left: -44px;  
+.dataCompanyForm {
+  margin-left: -35px;
 }
+
 
 .dataTelTitle {
   margin-left: 116px;
@@ -153,10 +152,7 @@
   margin-left: -41px;
 }
 
-// .dataList {
-//   background-color: #F9F0F5;
-//   width: 100%;
-// }
+
 
 .dataInquiryForm {
   margin-left: -43px;
@@ -208,6 +204,7 @@
   border-radius: 10px;
   font-size: 14px;
   border-color: white;
+  cursor: pointer;
 }
 
 .dataSortButton select {
@@ -218,6 +215,7 @@
   height: 24px;
   background-color: #b0757a;
   color: white;
+  cursor: pointer;
 }
 
 .dataStatusButton select {
@@ -227,5 +225,6 @@
   "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   height: 24px;
   background-color: #605253;
-  color: white
+  color: white;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import { db } from "../../../lib/firebase";
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useRecoilState } from "recoil";
-import { formState } from '../../../component/atom';
+import { formState } from "../../../component/atom";
 import { auth } from "../../../lib/firebase";
 import React from "react";
 import Link from "next/link";
@@ -191,7 +191,6 @@ useLayoutEffect(() => {
       <div className={scss.dataName}>
         <span className={scss.dataIDTitle}>固有ID</span>
         <span className={scss.dataNameTitle}>氏名</span>
-        <span className={scss.dataFuriganaTitle}>ふりがな</span>
         <span className={scss.dataCompanyTitle}>会社・組織名</span>
         <span className={scss.dataMailTitle}>メールアドレス</span>
         <span className={scss.dataTelTitle}>電話番号</span>
@@ -200,7 +199,6 @@ useLayoutEffect(() => {
         <span className={scss.dataInquiryTitle}>お問い合わせ内容</span>
         <span className={scss.dataStatusTitle}>対応状況</span>
         <span className={scss.dataDateTitle}>送信日</span>
-        <span className={scss.dataEditDateTitle}>編集更新日</span>
       </div>
 
 
@@ -210,7 +208,7 @@ useLayoutEffect(() => {
           </p>  
             :
           <ul className={scss.dataForms}> 
-        {filteredForms?.map((form) =>(
+        {filteredForms.map((form) =>(
           <li className={scss.dataList} key={form.id}>
             
             <Link href = {{ pathname: "./dataUnder/show", 
@@ -221,7 +219,6 @@ useLayoutEffect(() => {
             updatedAt: form.updatedAt,status: form.status }}}>
             <span className={scss.dataIDForm}>{form.id}</span></Link>
             <span className={scss.dataNameForm}>{form.names}</span>
-            <span className={scss.dataFuriganaForm}>{form.furigana}</span>
             <span className={scss.dataCompanyForm}>{form.company}</span>
             <span className={scss.dataMailForm}>{form.email}</span>
             <span className={scss.dataTelForm}>{form.tel}</span>
@@ -240,8 +237,6 @@ useLayoutEffect(() => {
             </select>
             </span>
             <span className={scss.dataDateForm}>{form.createdAt}</span>
-            <span className={scss.dataEditDateForm}>{form.updatedAt}</span>
-            
             <span className={scss.dataDeleteButton}>
               <button 
                 onClick={() => handleDeleteForm(form)}
