@@ -51,11 +51,14 @@
       width: 70px;
       height: 45px;
       margin-top: 0;
+      -webkit-apperance: none;
     }
+  
     @media screen and (max-width: 375px) {
       width: 46px;
       height: 50px;
       font-size: 6px;
+      -webkit-apperance: none;
     }
 }
 
@@ -225,6 +228,7 @@
   top: 0;
   left: 0;
   z-index: 1;
+  -webkit-apperance: none;
 }
 
 .dataStatusButton select {
@@ -239,4 +243,6 @@
   position: sticky;
   top: 0;
   left: 120px;
+  -webkit-apperance: none;
 }
+
