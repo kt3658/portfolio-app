@@ -305,7 +305,7 @@
 }
 
 
-.contact-container input::-webkit-input-placeholder {
+.contact-container input::placeholder {
   padding-top: 12px;
   color: #ccc;
 }
