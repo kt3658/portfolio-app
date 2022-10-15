@@ -20,11 +20,11 @@ export default function Worksunder() {
 
         <nav className={scss['header-nav']} id="js-header-nav">
           <ul className={scss['header-ul']}>
-            <li><a href="http://localhost:3000/#">Home</a></li>
-            <li><a href="http://localhost:3000/#js-service">Service</a></li>
-            <li><a href="http://localhost:3000/#js-about">About</a></li>
-            <li><a href="http://localhost:3000/#js-works">Works</a></li>
-            <li><a href="http://localhost:3000/#js-contact">Contact</a></li>  
+            <li><a href="https://portfolio-project-mu-liard.vercel.app/#">Home</a></li>
+            <li><a href="https://portfolio-project-mu-liard.vercel.app/#js-service">Service</a></li>
+            <li><a href="https://portfolio-project-mu-liard.vercel.app/##js-about">About</a></li>
+            <li><a href="https://portfolio-project-mu-liard.vercel.app/##js-works">Works</a></li>
+            <li><a href="https://portfolio-project-mu-liard.vercel.app/##js-contact">Contact</a></li>  
           </ul>
         </nav>
         
@@ -132,7 +132,7 @@ export default function Worksunder() {
           <p className={scss['worksunder-pagenation']}><Link href="#">1</Link></p>
           <p className={scss['worksunder-pagenation2']}><Link href="#">＞</Link></p>
         </div>
-        <div className={scss['worksunder-button']}><Link href="http://localhost:3000/#"><input type="submit" value="戻る"/></Link></div>
+        <div className={scss['worksunder-button']}><Link href="index"><input type="submit" value="戻る"/></Link></div>
       </section>
       
       <div className={`${scss.footer} ${scss.wrapper}`}>

@@ -20,7 +20,7 @@ import 'animate.css';
 
 
 export default function Main() {
-
+  
   const [openMenu, setOpenMenu] = useState(false);
   const menuFunction = () => {
     setOpenMenu(!openMenu);
@@ -52,11 +52,11 @@ export default function Main() {
 
         <nav className={scss['header-nav']} id="js-header-nav">
           <ul className={scss['header-ul']}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#js-service">Service</a></li>
-            <li><a href="#js-about">About</a></li>
-            <li><a href="#js-works">Works</a></li>
-            <li><a href="#js-contact">Contact</a></li>  
+            <li><Link href="#"><a>Home</a></Link></li>
+            <li><Link href="#js-service"><a>Service</a></Link></li>
+            <li><Link href="#js-about"><a>About</a></Link></li>
+            <li><Link href="#js-works"><a>Works</a></Link></li>
+            <li><Link href="#js-contact"><a>Contact</a></Link></li>  
           </ul>
         </nav>
         
@@ -86,30 +86,30 @@ export default function Main() {
           </li>
           <li>
             <Link href="#js-service">
-            <a>
+              <a>
               <p className={scss.mainTitle}>Service</p>
-            </a>
+              </a>
             </Link>
           </li>
           <li>
             <Link href="#js-about">
-            <a>
+              <a>
               <p className={scss.mainTitle}>About</p>
-            </a>
+              </a>
             </Link>
           </li>
           <li>
             <Link href="#js-works">
-            <a>
+              <a>
               <p className={scss.mainTitle}>Works</p>
-            </a>
+              </a>
             </Link>
           </li>
           <li>
             <Link href="#js-contact">
-            <a>
-              <p className={scss.mainTitle}>Contact</p>   
-            </a>
+              <a>
+              <p className={scss.mainTitle}>Contact</p> 
+              </a>  
             </Link>
           </li>
         </ul>
@@ -231,19 +231,19 @@ export default function Main() {
         >
             
               <SwiperSlide className={scss.swiperSlide}>
-                <Image src="/images/portfolio-swiper.png" alt="1" width="420" height="360"/>
+                <Link href="corporate"><Image src="/images/portfolio-swiper.png" alt="1" width="420" height="360"/></Link>
               </SwiperSlide>
               <SwiperSlide className={scss.swiperSlide}>
-                <Image src="/images/portfolio-swiper2.png" alt="2" width="420" height="360" />
+                <Link href="sneakers"><Image src="/images/portfolio-swiper2.png" alt="2" width="420" height="360" /></Link>
               </SwiperSlide>
               <SwiperSlide className={scss.swiperSlide}>
-                <Image src="/images/portfolio-swiper3.png" alt="3" width="420" height="360"/>
+                <Link href="coffee"><Image src="/images/portfolio-swiper3.png" alt="3" width="420" height="360"/></Link>
               </SwiperSlide>
               <SwiperSlide className={scss.swiperSlide}>
-                <Image src="/images/portfolio-swiper4.png" alt="4" width="420" height="360"/>
+                <Link href="interior"><Image src="/images/portfolio-swiper4.png" alt="4" width="420" height="360"/></Link>
               </SwiperSlide>
               <SwiperSlide className={scss.swiperSlide}>
-                <Image src="/images/portfolio-swiper5.png" alt="5" width="420" height="360"/>
+                <Link href="original"><Image src="/images/portfolio-swiper5.png" alt="5" width="420" height="360"/></Link>
               </SwiperSlide>
           </Swiper>
 
