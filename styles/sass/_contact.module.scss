@@ -288,6 +288,10 @@
   
 }
 
+.contact-container input[type=text] {
+  line-height: normal;
+}
+
 
 
 
@@ -304,10 +308,6 @@
 .contact-container input::-webkit-input-placeholder {
   padding-top: 12px;
   color: #ccc;
-  @media screen and (max-width: 750px) {
-    padding-top: 8px;
-    color: #ccc;
-  }
 }
 
 .contact-container textarea::placeholder {
