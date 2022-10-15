@@ -21,7 +21,7 @@ export default function Data() {
   
   useEffect(()=> {
     const unSub = auth.onAuthStateChanged((user)=> {
-      !user && router.push("../Login");
+      !user && router.push("../../Login/Login");
     });
     return ()=> unSub();
   })
@@ -124,7 +124,7 @@ export default function Data() {
 useLayoutEffect(() => {
   const unSub = auth.onAuthStateChanged((user) => {
     setUser(user);
-    !user && router.push("../Login");
+    !user && router.push("../../Login/Login");
   });
   return () => unSub();
 });
@@ -151,7 +151,7 @@ useLayoutEffect(() => {
             onClick={async () => {
               try {
                 await auth.signOut();
-                router.push("../Login");
+                router.push("../../Login/Login");
               } catch (error) {
                 alert(error.message);
               }
@@ -171,7 +171,7 @@ useLayoutEffect(() => {
         <select
           value={sort}
           onChange={(e) => sortFormByDate(e)}>
-          <option>作成日でソート</option>
+          <option>送信日でソート</option>
           <option value="asc">昇順</option>
           <option value="desk">降順</option>
         </select>

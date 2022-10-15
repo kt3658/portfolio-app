@@ -32,6 +32,7 @@
 
 .dataAdmin {
   margin-right: 16px;
+  cursor: pointer;
 }
 
 
@@ -45,6 +46,7 @@
     border-radius: 10px;
     margin-right: 20px;
     font-size: 16px;
+    cursor: pointer;
     @media screen and (max-width: 750px) {
       width: 70px;
       height: 45px;
@@ -133,6 +135,7 @@
 
 .dataIDForm {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .dataCompanyForm {
@@ -168,6 +171,7 @@
 
 .dataStatusForm select {
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .dataDeleteButton {
@@ -183,6 +187,7 @@
   border-radius: 10px;
   font-size: 14px;
   border-color: white;
+  cursor: pointer;
 }
 
 .dataDeleteButton button:hover {
@@ -216,6 +221,10 @@
   background-color: #b0757a;
   color: white;
   cursor: pointer;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .dataStatusButton select {
@@ -227,4 +236,7 @@
   background-color: #605253;
   color: white;
   cursor: pointer;
+  position: sticky;
+  top: 0;
+  left: 120px;
 }
