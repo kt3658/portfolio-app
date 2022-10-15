@@ -17,11 +17,11 @@ export default function Interior() {
 
       <nav className={scss['header-nav']} id="js-header-nav">
         <ul className={scss['header-ul']}>
-          <li><a href="https://portfolio-project-mu-liard.vercel.app/#">Home</a></li>
-          <li><a href="https://portfolio-project-mu-liard.vercel.app/#js-service">Service</a></li>
-          <li><a href="https://portfolio-project-mu-liard.vercel.app/#js-about">About</a></li>
-          <li><a href="https://portfolio-project-mu-liard.vercel.app/#js-works">Works</a></li>
-          <li><a href="https://portfolio-project-mu-liard.vercel.app/#js-contact">Contact</a></li>  
+          <li><a href="https://portfolio-app-one-omega.vercel.app/#">Home</a></li>
+          <li><a href="https://portfolio-app-one-omega.vercel.app/#js-service">Service</a></li>
+          <li><a href="https://portfolio-app-one-omega.vercel.app/#js-about">About</a></li>
+          <li><a href="https://portfolio-app-one-omega.vercel.app/#js-works">Works</a></li>
+          <li><a href="https://portfolio-app-one-omega.vercel.app/#js-contact">Contact</a></li>  
         </ul>
       </nav>
       
