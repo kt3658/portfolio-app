@@ -254,10 +254,7 @@
   @media screen and (max-width: 750px) {
     width: 100%;
   }
-  // dt {
-  //   text-align: left;
-  //   padding-top: 24px;
-  // }
+
 }
 
 .contact-container span {
@@ -303,15 +300,12 @@
   padding: 12px 0 0 6px;
 }
 
-// .contact-container input::placeholder {
-//   padding-top: 12px;
-//   color: #ccc;
-// }
-
-.contact-container input::-webkit-input-placeholder {
-  padding-top: 10px;
+.contact-container input::placeholder {
+  padding-top: 12px;
   color: #ccc;
 }
+
+
 
 
 .contact-container textarea::placeholder {
