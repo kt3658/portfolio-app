@@ -31,13 +31,13 @@ export default function Worksunder() {
         
         <header id="header" className={scss.header}>
           <div className={scss.container}>
-          <div className={scss.humburger} onClick={() => menuFunction()}>
-            <span className={openMenu ? scss.open : undefined}></span>
-            <span className={openMenu ? scss.open : undefined}></span>
-            <p className={openMenu ? scss.open : undefined}>Menu</p>
+            <div className={scss.humburger} onClick={() => menuFunction()}>
+              <span className={openMenu ? scss.open : undefined}></span>
+              <span className={openMenu ? scss.open : undefined}></span>
+              <p className={openMenu ? scss.open : undefined}>Menu</p>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
       <div className={`${scss.drawerMenu} ${openMenu ? scss.open : undefined}`}>
         <ul>
           <div className={scss.close} onClick={() => menuFunction()}>

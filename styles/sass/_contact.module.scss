@@ -182,7 +182,14 @@
         }
       }
     }
-
+.site-title {
+  font-size: 32px;
+  padding: 20px 0;
+  font-family:"Helvetica";
+  @media screen and (max-width: 750px) {
+    font-size: 22px;
+    }
+}
 
 .section-title {
   font-weight: normal;
