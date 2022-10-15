@@ -130,35 +130,35 @@ export default function Form() {
             <p>Close</p>
           </div>
           <li>
-            <Link href="#">
+            <Link href="https://portfolio-app-one-omega.vercel.app/#">
               <a>
                 <p className={scss.mainTitle}>Home</p>
               </a>
             </Link>
           </li>
           <li>
-            <Link href="#js-service">
+            <Link href="https://portfolio-app-one-omega.vercel.app/#js-service">
             <a>
               <p className={scss.mainTitle}>Service</p>
             </a>
             </Link>
           </li>
           <li>
-            <Link href="#js-about">
+            <Link href="https://portfolio-app-one-omega.vercel.app/#js-about">
             <a>
               <p className={scss.mainTitle}>About</p>
             </a>
             </Link>
           </li>
           <li>
-            <Link href="#js-works">
+            <Link href="https://portfolio-app-one-omega.vercel.app/#js-works">
             <a>
               <p className={scss.mainTitle}>Works</p>
             </a>
             </Link>
           </li>
           <li>
-            <Link href="#js-contact">
+            <Link href="https://portfolio-app-one-omega.vercel.app/#js-contact">
             <a>
               <p className={scss.mainTitle}>Contact</p>   
             </a>
