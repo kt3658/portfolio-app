@@ -369,21 +369,16 @@ export default function Form() {
       </div>
         
       
-      <div className={scss.contactButton}><input type="submit" value="送信する"/></div>
-          
-          
-        
-    </form>
-    </div>
-    </div>
+          <div className={scss.contactButton}><input type="submit" value="送信する"/></div>    
+          </form>
+        </div>
+      </div>
     </section>
     
     
     <div className={`${scss.footer} ${scss.wrapper}`}>
       <p>Copyright©2022 KEN portfolio All rights reserved.</p>
     </div>
-    
-
   </>
   )
 }

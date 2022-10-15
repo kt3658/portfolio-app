@@ -92,7 +92,7 @@ export default function Coffee() {
       
 
 
-      <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
+    <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
       <Link href="https://kt3658.github.io/cordstep-store/">
         <div className={scss['secondlayer-image']}>
           <Image src="/images/portfolio-swiper3.png" alt="詳細ページ画像" width="1040" height="884"/>
@@ -112,8 +112,6 @@ export default function Coffee() {
           </dd>
         </div>
         <div className={scss['secondlayer-button']}><Link href="worksunder"><input type="submit" value="制作実績に戻る"/></Link></div>
-      
-      
       </section>
       
       <div className={`${scss.footer} ${scss.wrapper}`}>

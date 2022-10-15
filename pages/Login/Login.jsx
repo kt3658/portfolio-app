@@ -89,7 +89,7 @@ import scss from "../../styles/sass/_login.module.scss";
         <Link href="../form"><p><button
         className={scss.LoginBack}
         >前のページへ</button></p></Link>
-        </div>
+      </div>
     </div>
   );
 };

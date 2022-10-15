@@ -84,46 +84,46 @@ export default function Edit() {
     setEditId();
   };
   return (
-    <>
+  <>
     <Head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
 
     <div className={scss.editTitleContainer}>
-    <p className={scss.editTitle}>FormDataEdit</p>
+      <p className={scss.editTitle}>FormDataEdit</p>
     </div>
-      <div className={scss.container}>
-        <div className={scss.editBox}>
+    <div className={scss.container}>
+      <div className={scss.editBox}>
         
         <div className={scss.editContainer}>
-        <dt className={scss.editNameTitle}>氏名</dt>
-        
-        <input
-          className={scss.editNameData}
-          type="text"
-          maxLength="11"
-          label="新しいタイトル"
-          placeholder="山田太郎"
-          value={newCustomerName}
-          onChange={handleEditNamesChange}
+          <dt className={scss.editNameTitle}>氏名</dt>
           
-        />
+          <input
+            className={scss.editNameData}
+            type="text"
+            maxLength="11"
+            label="新しいタイトル"
+            placeholder="山田太郎"
+            value={newCustomerName}
+            onChange={handleEditNamesChange}
+          />
         </div>
         
         <div className={scss.editContainer}>
-        <dt className={scss.editNameTitle}>ふりがな</dt>
-        <input 
-          className={scss.editNameData}
-          type="text"
-          label="新しいタイトル"
-          placeholder="やまだたろう"
-          value={newFuriganaName}
-          onChange={handleEditFuriganaChange}  
-        />
+          <dt className={scss.editNameTitle}>ふりがな</dt>
+          <input 
+            className={scss.editNameData}
+            type="text"
+            label="新しいタイトル"
+            placeholder="やまだたろう"
+            value={newFuriganaName}
+            onChange={handleEditFuriganaChange}  
+          />
         </div>
       </div>
+      
       <div className={scss.editBox1}>
         <div className={scss.editContainer1}>
           <span>
@@ -137,37 +137,37 @@ export default function Edit() {
             value={newCompanyName}
             onChange={handleEditCompanyChange}  
           />
-        
           </span>
         </div>
       </div>
         
-        <div className={scss.editBox2}>
+      <div className={scss.editBox2}>
         <div className={scss.editContainer2}>
-        <dt className={scss.editNameTitle}>メールアドレス</dt>
-        <input
-          className={scss.editPhoneData} 
-          type="text"
-          label="新しいタイトル"
-          placeholder="aa@aa.com"
-          value={newMail}
-          onChange={handleEditMailChange}  
-        />
+          <dt className={scss.editNameTitle}>メールアドレス</dt>
+          <input
+            className={scss.editPhoneData} 
+            type="text"
+            label="新しいタイトル"
+            placeholder="aa@aa.com"
+            value={newMail}
+            onChange={handleEditMailChange}  
+          />
         </div>
         
         <div className={scss.editContainer2}>
-        <dt className={scss.editNameTitle}>電話番号</dt>
-        <input
-          className={scss.editPhoneData} 
-          type="text"
-          label="新しいタイトル"
-          placeholder="090-0123-4567"
-          value={newTelephone}
-          onChange={handleEditTelephoneChange}  
-        />
+          <dt className={scss.editNameTitle}>電話番号</dt>
+          <input
+            className={scss.editPhoneData} 
+            type="text"
+            label="新しいタイトル"
+            placeholder="090-0123-4567"
+            value={newTelephone}
+            onChange={handleEditTelephoneChange}  
+          />
         </div>
-        </div>
-        <div className={scss.editBox3}>
+      </div>
+
+      <div className={scss.editBox3}>
         <label>
           ご用件：
           <input
@@ -244,35 +244,35 @@ export default function Edit() {
         </label>
       </div>
       <div className={scss.editBox5}>
-      <dt className={scss.editMessageText}>お問い合わせ内容</dt>
-      <textarea
-          className={scss.editLargeBox}
-          type="text"
-          maxLength="100"
-          label="新しいタイトル"
-          placeholder="よろしくお願いします"
-          value={newMessage}
-          onChange={handleEditMessageChange}  
-        />
+        <dt className={scss.editMessageText}>お問い合わせ内容</dt>
+        <textarea
+            className={scss.editLargeBox}
+            type="text"
+            maxLength="100"
+            label="新しいタイトル"
+            placeholder="よろしくお願いします"
+            value={newMessage}
+            onChange={handleEditMessageChange}  
+          />
         </div>
         <Link href={{ pathname: "../data", query: { names: newCustomerName, furigana: newFuriganaName,company: newCompanyName, email: newMail,affair: newRequirement,corporatesStructure: newBusinessForm,updatedAt: newUpdate } }}>
           <div className={scss.editButton}>
-          <button 
-            onClick={handleEditForm}>
-              編集を保存
-          </button>
+            <button 
+              onClick={handleEditForm}>
+                編集を保存
+            </button>
           </div>
         </Link>
         <div className={scss.backButton}>
-        <Link href="../data">
-          <button 
-            >
-              前のページに戻る
-          </button>
-        </Link>
+          <Link href="../data">
+            <button 
+              >
+                前のページに戻る
+            </button>
+          </Link>
         </div>
       </div>
-      </>
+    </>
   )
 
 

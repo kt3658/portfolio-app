@@ -95,7 +95,7 @@ export default function Sneakers() {
       
 
 
-      <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
+    <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
       <Link href="https://kt3658.github.io/codestep-media/">
         <div className={scss['secondlayer-image']}>
           <Image src="/images/portfolio-swiper2.png" alt="詳細ページ画像" width="1040" height="884"/>

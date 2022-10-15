@@ -94,7 +94,7 @@ export default function Interior() {
       
 
 
-      <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
+    <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
       <Link href="https://kt3658.github.io/codestep-interior/">
         <div className={scss['secondlayer-image']}>
           <Image src="/images/portfolio-swiper4.png" alt="詳細ページ画像" width="1040" height="884"/>

@@ -6,7 +6,7 @@ export default function Show() {
   const router = useRouter();
   return (
   
-    <>
+  <>
     <div className={scss.showTitle}>
       <p className={scss.showText}>FormDataDetail</p>
     </div>

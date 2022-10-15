@@ -94,7 +94,7 @@ export default function Original() {
       
 
 
-      <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
+    <section id="js-secondlayer" className={`${scss.secondlayer} ${scss.wrapper}`}>
       <Link href="https://ken-webportfolio.com/">
         <div className={scss['secondlayer-image']}>
           <Image src="/images/portfolio-swiper5.png" alt="詳細ページ画像" width="1040" height="884"/>
