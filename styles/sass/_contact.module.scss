@@ -303,12 +303,9 @@
   padding: 12px 0 0 6px;
 }
 
-.contact-container input::placeholder {
+.contact-container input::-webkit-input-placeholder {
   padding: 12px 0 0 0px;
   color: #ccc;
-  @media screen and (max-width: 750px) {
-    padding: 4px 0 0 0 px;
-    }
 }
 
 .contact-container textarea::placeholder {
