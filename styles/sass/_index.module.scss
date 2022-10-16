@@ -524,9 +524,8 @@
 }
 
 .swiper-pagination-bullet {
-  margin-left: 6px;
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));
+  margin-left: 4px;
+  padding: 8px;
 }
 
 .swiper-pagination {
