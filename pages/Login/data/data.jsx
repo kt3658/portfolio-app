@@ -137,7 +137,7 @@ useLayoutEffect(() => {
     <>
     <div className={scss.dataTitle}>
       <div>
-        <p className={scss.dataText}>DAT ADMINISTRATOR</p>
+        <p className={scss.dataText}>DATA ADMINISTRATOR</p>
       </div>
       <div className={scss.dataRight}>
         <Link href="./dataUnder/admin">
