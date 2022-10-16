@@ -44,9 +44,11 @@
     background-color: #565A5C;
     color: #fff;
     border-radius: 10px;
+    text-align: center;
     margin-right: 20px;
     font-size: 16px;
     cursor: pointer;
+    display: block;
     @media screen and (max-width: 750px) {
       width: 70px;
       height: 45px;
@@ -194,7 +196,8 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  -webkit-apperance: none;
+  text-align: center;
+  display: block;
 }
 
 .dataDeleteButton button:hover {
@@ -217,7 +220,8 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  -webkit-apperance: none;
+  text-align: center;
+  display: block;
 }
 
 .dataSortButton select {
