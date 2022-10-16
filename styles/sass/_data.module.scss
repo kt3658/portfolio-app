@@ -48,7 +48,6 @@
     margin-right: 20px;
     font-size: 16px;
     cursor: pointer;
-    display: block;
     @media screen and (max-width: 750px) {
       width: 70px;
       height: 45px;
@@ -58,6 +57,7 @@
       width: 80px;
       height: 45px;
       margin-top: 0;
+      padding-right: 8px;
     }
   
     @media screen and (max-width: 375px) {
@@ -196,8 +196,9 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  text-align: center;
-  display: block;
+  @media screen and (max-width: 420px) {
+    padding-right: 6px;
+  }
 }
 
 .dataDeleteButton button:hover {
@@ -220,8 +221,10 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  text-align: center;
-  display: block;
+  @media screen and (max-width: 420px) {
+    padding-right: 6px;
+  }
+  
 }
 
 .dataSortButton select {
