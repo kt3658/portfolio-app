@@ -308,7 +308,9 @@
 .contact-container input::placeholder {
   padding-top: 12px;
   color: #ccc;
-  -webkit-apperance: none;
+  @media screen and (max-width: 500px) {
+    padding: 6px;
+  }
 }
 
 .contact-container textarea::placeholder {
