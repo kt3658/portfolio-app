@@ -48,12 +48,17 @@
     margin-right: 20px;
     font-size: 16px;
     cursor: pointer;
-    display: inline-block;
     text-align: center;
     @media screen and (max-width: 750px) {
       width: 70px;
       height: 45px;
       margin-top: 0;
+    }
+    @media screen and (max-width: 420px) {
+      width: 60px;
+      height: 45px;
+      margin-top: 0;
+      font-size: 14px;
     }
   
     @media screen and (max-width: 375px) {
@@ -192,8 +197,10 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  display: inline-block;
   text-align: center;
+  @media screen and (max-width: 420px) {
+    width: 45px;
+  }
 }
 
 .dataDeleteButton button:hover {
@@ -216,8 +223,10 @@
   font-size: 14px;
   border-color: white;
   cursor: pointer;
-  display: inline-block;
   text-align: center;
+  @media screen and (max-width: 420px) {
+    width: 45px;
+  }
   
 }
 
