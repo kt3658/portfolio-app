@@ -8,8 +8,8 @@ export default function Interior() {
     setOpenMenu(!openMenu);
   }
   return (
-    <>
-    <section id="js-header" className={scss.header}>
+  <>
+  <section id="js-header" className={scss.header}>
     <div className={`${scss.wrapper}  ${scss['header-container']}`}>
       <h1 className={scss['site-title']}>
         <a href="#">KEN PORTFOLIO</a>
@@ -79,8 +79,8 @@ export default function Interior() {
         </li>
       </ul>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 <main>
 
@@ -122,7 +122,6 @@ export default function Interior() {
         <p>Copyright©2022 KEN portfolio All rights reserved.</p>
       </div>
     </main> 
-    </>
+  </>
   )
-
 }

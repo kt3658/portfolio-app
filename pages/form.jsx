@@ -96,7 +96,7 @@ export default function Form() {
     {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css"/>   */}
   </Head>
 
-  <section id="js-header" className={scss.header}>
+    <section id="js-header" className={scss.header}>
       <div className={`${scss.wrapper}  ${scss['header-container']}`}>
         <h1 className={scss['site-title']}>
           <a href="#">KEN PORTFOLIO</a>
@@ -166,8 +166,8 @@ export default function Form() {
           </li>
         </ul>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   
   

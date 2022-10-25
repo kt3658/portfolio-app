@@ -114,8 +114,8 @@ export default function Main() {
           </li>
         </ul>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
 
       <div className={scss.mainvisual}>
@@ -282,8 +282,7 @@ export default function Main() {
       </div>
     
       </>
-    </main>
-    
-    </>
+    </main> 
+  </>
   )
 }

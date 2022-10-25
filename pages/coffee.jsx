@@ -120,5 +120,4 @@ export default function Coffee() {
     </main> 
     </>
   )
-
 }
